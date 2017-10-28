@@ -1,1 +1,9 @@
-@import "./layout/fonts.scss"
+// layout
+@import "./layout/fonts.scss";
+@import "./layout/base.scss";
+
+// config
+@import "./config/mixins.scss";
+@import "./config/variables.scss";
+
+//section
