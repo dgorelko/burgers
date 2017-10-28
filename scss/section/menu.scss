@@ -1,0 +1,27 @@
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  margin-right: 14px;
+}
+
+.menu__item {
+  // margin-right: 36px;
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    @include circle(5px, #fff);
+    margin: 0 12px;
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.menu__link {
+  font-family: ubuntumedium;
+  font-size: 13px;
+  color:#ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}

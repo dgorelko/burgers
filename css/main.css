@@ -1,33 +1,192 @@
+/* colors */
 @font-face {
   font-family: 'gagalinregular';
-  src: url("../../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../../fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'lifehackmedium';
-  src: url("../../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../../fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'ubuntubold';
-  src: url("../../fonts/ubuntu-b-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'ubuntulight';
-  src: url("../../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-light-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'ubuntumedium';
-  src: url("../../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-medium-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'ubunturegular';
-  src: url("../../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-regular-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-/* colors */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.42;
+  color: #2f3234;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body, html {
+  height: 100%; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.container {
+  width: 940px;
+  margin: 0 auto; }
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  background-color: rgba(0, 0, 0, 0.31); }
+
+.greeting {
+  background-image: url("../images/bg/greeting.jpg");
+  background-size: cover;
+  padding-top: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative; }
+
+.greeting__title {
+  font-family: gagalinregular;
+  font-size: 72px;
+  color: #f9b43b; }
+
+.greeting__text {
+  font-family: lifehackmedium;
+  font-size: 65px;
+  color: #fff; }
+
+.greeting__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.greeting__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center; }
+
+.greeting__arrow {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.header__logo {
+  margin-right: auto; }
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.header__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.order__link {
+  padding: 10px 17px;
+  border-radius: 5px;
+  background-color: #e45028;
+  color: #fff;
+  text-decoration: none;
+  font-family: ubuntumedium;
+  font-size: 13px;
+  line-height: 1.42;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  transition: .5s; }
+  .order__link:hover {
+    background-color: #c13c18; }
+
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 14px; }
+
+.menu__item:after {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #fff;
+  margin: 0 12px; }
+.menu__item:last-child:after {
+  display: none; }
+
+.menu__link {
+  font-family: ubuntumedium;
+  font-size: 13px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
