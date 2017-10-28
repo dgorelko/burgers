@@ -1,2 +1,2 @@
 # burgers
-Landing Page Burgers Shop
+Landing Page for Burger Shop
