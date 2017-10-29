@@ -148,6 +148,15 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center; }
 
+.logo {
+  display: inline-block;
+  height: 74px;
+  width: 98px; }
+
+.logo__img {
+  max-height: 100%;
+  max-width: 100%; }
+
 .order__link {
   padding: 10px 17px;
   border-radius: 5px;
