@@ -312,4 +312,38 @@ h1, h2, h3, h4, h5, h6 {
   height: 50%;
   background-size: cover; }
 
+.points {
+  position: fixed;
+  top: 5.625rem;
+  right: 3%;
+  z-index: 200; }
+  .points__item {
+    display: block;
+    border: 0.0625rem solid transparent;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    position: relative;
+    margin-bottom: 0.3125rem; }
+    .points__item_active {
+      border-color: #fff; }
+    .points__item:hover {
+      border-color: #fff;
+      -webkit-transition: 0.5;
+      transition: 0.5; }
+  .points__link {
+    display: block;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 0.1875rem;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s; }
+
 /*# sourceMappingURL=main.css.map */

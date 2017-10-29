@@ -14,7 +14,7 @@
 <body>
     <div class="wrapper">
         <div class="maincontent">
-          <section class="section greeting">
+          <section class="section greeting" id="greeting-section">
             <div class="container greeting__container">
               <header class="header">
                 <div class="header__logo">
@@ -24,11 +24,11 @@
                 </div>
                 <nav class="header__menu">
                   <ul class="menu-list">
-                    <li class="menu__item"><a href="#" class="menu__link">о нас</a></li>
+                    <li class="menu__item"><a href="#about-section" class="menu__link">о нас</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">бургеры</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">команда</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">меню</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">отзывы</a></li>
+                    <li class="menu__item"><a href="#reviews-section" class="menu__link">отзывы</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">контакты</a></li>
                   </ul>
                 </nav>
@@ -41,12 +41,12 @@
                   <h2 class="greeting__text">натуральные бургеры</h2>
                 </div>
               </div>
-              <a href="" class="greeting__arrow arrow">
+              <a href="#about-section" class="greeting__arrow arrow">
                   <img src="./images/icons/arrow-scroll.svg" alt="arrow" class="arrow__image">
               </a>
             </div>
           </section>
-          <section class="section about">
+          <section class="section about" id="about-section">
             <div class="container about__container">
               <h2 class="about__title">Мы лучшие</h2>
               <ul class="about-list">
@@ -81,7 +81,7 @@
               </ul>
             </div>
           </section>
-          <section class="section reviews">
+          <section class="section reviews" id="reviews-section">
             <ul class="reviews-list">
               <li class="reviews__item" style="background-image:url(./images/content/photo1.jpg)">
                   <div class="reviews__description">
@@ -139,8 +139,45 @@
                       <a href="" class="reviews__link">подробнее</a>
                   </div>
               </li>
-          </ul>
+             </ul>
           </section>
+          <!-- sidebar -->
+          <div class="points">
+            <ul class="points-list">
+                <li class="points__item points__item_active">
+                    <a href="#greeting-section" class="points__link">                    
+                    </a>                
+                </li>
+                <li class="points__item">
+                    <a href="#about-section" class="points__link">                    
+                    </a>                
+                </li>
+                <li class="points__item">
+                    <a href="#reviews-section" class="points__link">                    
+                    </a>                
+                </li>
+                <li class="points__item">
+                    <a href="#" class="points__link">                    
+                    </a>                
+                </li>                                              
+                <li class="points__item">
+                    <a href="#" class="points__link">                    
+                    </a>                
+                </li>
+                <li class="points__item">
+                    <a href="#" class="points__link">                    
+                    </a>                
+                </li>
+                <li class="points__item">
+                    <a href="#" class="points__link">                    
+                    </a>                
+                </li>
+                <li class="points__item">
+                    <a href="#" class="points__link">                    
+                    </a>                
+                </li>
+            </ul>
+        </div> 
         </div>
     </div>
 </body>
