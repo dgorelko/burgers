@@ -75,6 +75,9 @@ h1, h2, h3, h4, h5, h6 {
           box-sizing: border-box;
   position: relative; }
 
+.greeting__container {
+  height: 100%; }
+
 .greeting__title {
   font-family: gagalinregular;
   font-size: 72px;
