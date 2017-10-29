@@ -258,4 +258,58 @@ h1, h2, h3, h4, h5, h6 {
   color: #2f3234;
   margin: 0; }
 
+.reviews-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%; }
+
+.reviews__item:hover .reviews__description {
+  opacity: 1; }
+
+.reviews__description {
+  padding: 50px;
+  opacity: 0;
+  background-color: rgba(20, 20, 20, 0.7); }
+
+.reviews__name {
+  font-size: 14px;
+  color: #fff;
+  font-family: "gagalinregular";
+  margin: 0 0 31px 0; }
+
+.reviews__text {
+  font-family: "ubuntulight";
+  font-size: 14px;
+  color: #fff;
+  margin: 0 0 17px 0; }
+
+.reviews__link {
+  font-family: "ubuntumedium";
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 2px;
+  display: inline-block;
+  background-color: #2f3234; }
+  .reviews__link:hover {
+    background-color: #232527; }
+
+.reviews__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 4;
+      -ms-flex: 4 0 25%;
+          flex: 4 0 25%;
+  height: 50%;
+  background-size: cover; }
+
 /*# sourceMappingURL=main.css.map */
