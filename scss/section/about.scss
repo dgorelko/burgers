@@ -1,0 +1,55 @@
+.about {
+  background-image: url("../images/bg/about.png");
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.about__title {
+  margin: 0 0 82px 0;
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: $dark-grey;
+  text-transform: uppercase;
+}
+.about-list {
+  display: flex;
+}
+
+.about__item {
+  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__icon{
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.about__img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about__subtitle {
+  font-family: "lifehackmedium";
+  font-size: 24px;
+  color: $dark-grey;
+  margin: 0 0 25px 0;
+}
+
+.about__description {
+  font-family: "ubuntulight";
+  font-size: 14px;
+  color: $dark-grey;
+  margin: 0;
+}

@@ -1,2 +1,2 @@
-# burgers
-Landing Page Burgers Shop
+# Лендинг "Бургерная"
+Landing Page for Burger Shop

@@ -1,0 +1,41 @@
+.points {
+  position: fixed;
+  top: rem(100px);
+  right: rem(50px);
+  z-index: 200;
+
+  &__item {
+    display: block;
+    border: rem(1px) solid transparent;
+    @include circle(rem(16px), transparent);
+    position: relative;
+    margin-bottom: rem(5px);
+    
+    &_active {
+        border-color: $white;
+    }
+    
+    &:hover {
+      border-color: $white;
+      transition: 0.5s;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__link {
+    height: 16px;
+    width: 16px;
+    display: block;
+    @include circle(rem(6px), $white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.5s;
+  }
+
+}

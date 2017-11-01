@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+
+.header__btn {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  height: 74px;
+  width: 98px;
+}
+
+.logo__img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.order__link {
+  padding: 10px 17px;
+  border-radius: 5px;
+  background-color: $orange;
+  color: #fff;
+  text-decoration: none;
+  font-family: ubuntumedium;
+  font-size: 13px;
+  line-height: 1.42;
+  text-transform: uppercase;
+  transition: .5s;
+  &:hover {
+    background-color: darken($orange, 10%);
+  }
+}
