@@ -1,0 +1,95 @@
+.team {
+  background: url("../images/bg/team.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team__container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: rgba($dark-grey, .93);
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 88px;
+}
+
+.team__title {
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: $yellow;
+  padding-bottom: 90px;
+}
+
+.team-accordion__item {
+  padding-bottom: 40px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+.team-accordion__name{
+  color: $white;
+  font-family: "gagalinregular";
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: "";
+    height: 0;
+    width: 0;
+    margin-right: 8px;
+    border: 9px solid transparent;
+    border-top-color: $yellow;
+    border-bottom-width: 0px;
+
+  }
+}
+
+.team-accordion__content {
+  padding-top: 15px;
+  padding-left: 24px;
+  height: 0;
+  overflow: hidden;
+}
+
+.team-accordion__pic {
+ height: 100px;
+ width: 100px;
+ overflow: hidden;
+ border-radius: 50%;
+}
+
+.team-accordion__img {
+  height: 100%;
+  width: 100%; 
+}
+
+.team-accordion__text {
+  color: $white;
+  width: 260px;
+  padding-left: 20px;
+  &-title {
+    font-family: "ubuntubold";
+  }
+  &-content {
+    font-family: "ubuntulight";
+  }
+}
+
+.team-accordion__item_active {
+  .team-accordion__name {
+    color: $yellow;
+    &:before {
+      transform: rotate(-180deg);
+    }
+  }
+  .team-accordion__content {
+    height: 100%;
+    display: flex;
+  }
+}

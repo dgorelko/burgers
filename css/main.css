@@ -51,7 +51,8 @@ ul {
   list-style: none; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin: 0;
+  font-weight: normal; }
 
 .wrapper {
   width: 100%;
@@ -59,8 +60,17 @@ h1, h2, h3, h4, h5, h6 {
   position: relative; }
 
 .container {
+  margin: 0 auto;
+  position: relative;
   width: 940px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .section {
   height: 100vh;
@@ -359,5 +369,94 @@ h1, h2, h3, h4, h5, h6 {
             transform: translate(-50%, -50%);
     -webkit-transition: color 0.5s;
     transition: color 0.5s; }
+
+.team {
+  background: url("../images/bg/team.jpg") no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.team__container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: rgba(47, 50, 52, 0.93);
+  padding-left: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 88px; }
+
+.team__title {
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: #f9b43b;
+  padding-bottom: 90px; }
+
+.team-accordion__item {
+  padding-bottom: 40px; }
+  .team-accordion__item:last-child {
+    padding-bottom: 0; }
+
+.team-accordion__name {
+  color: #fff;
+  font-family: "gagalinregular";
+  font-size: 14px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .team-accordion__name:before {
+    content: "";
+    height: 0;
+    width: 0;
+    margin-right: 8px;
+    border: 9px solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom-width: 0px; }
+
+.team-accordion__content {
+  padding-top: 15px;
+  padding-left: 24px;
+  height: 0;
+  overflow: hidden; }
+
+.team-accordion__pic {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  border-radius: 50%; }
+
+.team-accordion__img {
+  height: 100%;
+  width: 100%; }
+
+.team-accordion__text {
+  color: #fff;
+  width: 260px;
+  padding-left: 20px; }
+  .team-accordion__text-title {
+    font-family: "ubuntubold"; }
+  .team-accordion__text-content {
+    font-family: "ubuntulight"; }
+
+.team-accordion__item_active .team-accordion__name {
+  color: #f9b43b; }
+  .team-accordion__item_active .team-accordion__name:before {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+.team-accordion__item_active .team-accordion__content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 /*# sourceMappingURL=main.css.map */
