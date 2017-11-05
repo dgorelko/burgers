@@ -669,7 +669,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 15px;
   height: 15px;
   background-color: #fff;
-  margin-right: 10px; }
+  margin-right: 10px;
+  vertical-align: top; }
 
 .form__checkbox + .form__label:after {
   content: '✔';
@@ -678,7 +679,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 2px;
   opacity: 0;
-  top: -2px;
+  top: -1px;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear; }
 
@@ -693,7 +694,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .form__radio + .form__label {
   position: relative;
-  margin-right: 20px; }
+  margin-right: 20px;
+  vertical-align: top; }
 
 .form__radio + .form__label:hover {
   cursor: pointer; }
@@ -705,7 +707,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   background-color: #fff;
   display: inline-block;
-  margin-right: 9px; }
+  margin-right: 9px;
+  vertical-align: top; }
 
 .form__radio + .form__label:after {
   content: '';
@@ -717,7 +720,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   position: absolute;
   left: 4px;
-  top: 2px;
+  top: 4px;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear; }
 
