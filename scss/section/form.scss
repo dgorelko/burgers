@@ -6,6 +6,10 @@
     flex-direction: column;
     width: rem(472px);
   }
+  @include tablet {
+    flex-direction: column;
+    width: rem(460px);
+  }
 }
 
 .form__container {
@@ -26,6 +30,11 @@
   }
 }
 
+.form__column_phoneres {
+  @include phone {
+    display: none;
+  }
+}
 .form__row {
   display: flex;
   flex-direction: row;

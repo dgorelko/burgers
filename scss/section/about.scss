@@ -59,3 +59,10 @@
   color: $dark-grey;
   margin: 0;
 }
+
+.about__info {
+  @include phone {
+  text-align: left;
+  margin-left: rem(25px);
+  }
+}

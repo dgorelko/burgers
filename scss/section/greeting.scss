@@ -6,6 +6,12 @@
   position: relative;
 }
 
+.greeting__img {
+ @include phone {
+   width: rem(366px);
+ }
+}
+
 .greeting__container {
   height: 100%;
 }
@@ -39,6 +45,7 @@
   }
   @include phone {
     flex-direction: column;
+    height: initial;
   }
 }
 
@@ -56,4 +63,9 @@
   bottom: rem(42px);
   left: 50%;
   transform: translateX(-50%);
+}
+
+.burger__img {
+  max-height: 100%;
+  max-width: 100%;
 }

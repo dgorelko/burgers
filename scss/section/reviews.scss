@@ -17,6 +17,7 @@
     text-align: center;
   }
 }
+
 .reviews__name {
   font-size: rem(14px);
   color: $white;
@@ -29,6 +30,9 @@
   font-size: rem(14px);
   color: $white;
   margin: 0 0 rem(17px) 0;
+  @include phone {
+    display: none;
+  }
 }
 
 
@@ -54,6 +58,10 @@
   background-size: cover;
   @include tablet {
     flex: 4 0 50%;
+    height: 25%;
+  }
+  @include phone {
+    flex: 4 0 25%;
     height: 25%;
   }
 }

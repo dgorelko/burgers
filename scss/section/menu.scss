@@ -26,6 +26,10 @@
   top: 0;
   bottom: 0;
   right: 0;
+  @include phone {
+    right: 0;
+    left: 0;
+  }
 }
 
 .menu-accordion__item, .menu-accordion__link {
@@ -37,6 +41,9 @@
 
 .menu-accordion__item_active .menu-accordion__description {
   width: rem(550px);
+  @include phone {
+    width: rem(400px);
+  }
 }
 
 .menu-accordion__link {

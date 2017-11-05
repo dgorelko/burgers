@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @include phone {
+    justify-content: center;
+  }
 }
 
 .socials__item {
