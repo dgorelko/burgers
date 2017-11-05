@@ -6,7 +6,7 @@
 
 .menu__title {
   font-family: "gagalinregular";
-  font-size: 72px;
+  font-size: rem(72px);
   color: $white;
   position: absolute;
   top: 10%;
@@ -15,7 +15,7 @@
 
 .menu-accordion__title {
   font-family: "gagalinregular";
-  font-size: 40px;
+  font-size: rem(40px);
   text-align: center;
   color: $white;
 }
@@ -36,11 +36,11 @@
 }
 
 .menu-accordion__item_active .menu-accordion__description {
-  width: 550px;
+  width: rem(550px);
 }
 
 .menu-accordion__link {
-  width: 80px;
+  width: rem(80px);
   text-decoration: none;
   &:after {
     position: absolute;
@@ -60,7 +60,7 @@
   transform-origin: 0 0;
   left: 50%;
   top: 100%;
-  margin-top: -150px;
+  margin-top: rem(-150px);
   white-space: nowrap;
   z-index: 2;
 }
@@ -70,10 +70,10 @@
   background: rgba($dark-grey, .93);
   overflow: hidden;
   font-family: "ubuntulight";
-  font-size: 14px;
+  font-size: rem(14px);
   color: $white;
 }
 
 .menu-accordion__text {
-  padding: 60px 30px;
+  padding: rem(60px) rem(30px);
 }

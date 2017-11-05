@@ -11,14 +11,14 @@
   right: 0;
   width: 50%;
   background: rgba($dark-grey, .93);
-  padding-left: 80px;
+  padding-left: rem(80px);
   display: flex;
   flex-direction: column;
-  padding-top: 88px;
+  padding-top: rem(88px);
   @include tablet {
     width: 100%;
     align-items: center;
-    padding-top: 123px;
+    padding-top: rem(123px);
     padding-left: 0;
     padding-right: 0;
   }
@@ -26,17 +26,17 @@
 
 .team__title {
   font-family: "gagalinregular";
-  font-size: 72px;
+  font-size: rem(72px);
   color: $yellow;
-  padding-bottom: 90px;
+  padding-bottom: rem(90px);
   @include tablet {
-    padding-bottom: 120px;
+    padding-bottom: rem(120px);
     display: block;
   }
 }
 
 .team-accordion__item {
-  padding-bottom: 40px;
+  padding-bottom: rem(40px);
   &:last-child {
     padding-bottom: 0;
   }
@@ -50,7 +50,7 @@
 .team-accordion__name{
   color: $white;
   font-family: "gagalinregular";
-  font-size: 14px;
+  font-size: rem(14px);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -59,17 +59,17 @@
     content: "";
     height: 0;
     width: 0;
-    margin-right: 8px;
-    border: 9px solid transparent;
+    margin-right: rem(8px);
+    border: rem(9px) solid transparent;
     border-top-color: $yellow;
-    border-bottom-width: 0px;
+    border-bottom-width: rem(0px);
 
   }
 }
 
 .team-accordion__content {
-  padding-top: 15px;
-  padding-left: 24px;
+  padding-top: rem(15px);
+  padding-left: rem(24px);
   height: 0;
   overflow: hidden;
   @include tablet {
@@ -81,8 +81,8 @@
 }
 
 .team-accordion__pic {
- height: 100px;
- width: 100px;
+ height: rem(100px);
+ width: rem(100px);
  overflow: hidden;
  border-radius: 50%;
 }
@@ -94,8 +94,8 @@
 
 .team-accordion__text {
   color: $white;
-  width: 260px;
-  padding-left: 20px;
+  width: rem(260px);
+  padding-left: rem(20px);
   &-title {
     font-family: "ubuntubold";
   }

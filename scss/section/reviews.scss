@@ -10,33 +10,36 @@
   opacity: 1;
 }
 .reviews__description{
-  padding: 50px;
+  padding: rem(50px);
   opacity: 0;
   background-color: rgba(20,20,20, .7);
+  @include tablet {
+    text-align: center;
+  }
 }
 .reviews__name {
-  font-size: 14px;
+  font-size: rem(14px);
   color: $white;
   font-family: "gagalinregular";
-  margin: 0 0 31px 0;
+  margin: 0 0 rem(31px) 0;
 }
 
 .reviews__text {
   font-family: "ubuntulight";
-  font-size: 14px;
+  font-size: rem(14px);
   color: $white;
-  margin: 0 0 17px 0;
+  margin: 0 0 rem(17px) 0;
 }
 
 
 .reviews__link {
   font-family: "ubuntumedium";
-  font-size: 13px;
+  font-size: rem(13px);
   text-transform: uppercase;
   color: $white;
-  padding: 7px 15px;
+  padding: rem(7px) rem(15px);
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: rem(2px);
   display: inline-block;
   background-color: $dark-grey;
   &:hover{
@@ -51,5 +54,6 @@
   background-size: cover;
   @include tablet {
     flex: 4 0 50%;
+    height: 25%;
   }
 }

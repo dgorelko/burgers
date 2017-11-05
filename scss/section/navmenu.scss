@@ -1,7 +1,7 @@
 .navmenu-list {
   display: flex;
   flex-direction: row;
-  margin-right: 14px;
+  margin-right: rem(14px);
   
   @include tablet {
     display: none;
@@ -9,13 +9,13 @@
 }
 
 .navmenu__item {
-  // margin-right: 36px;
+  // margin-right: rem(36px);
   &:after {
     display: inline-block;
     vertical-align: middle;
     content: '';
-    @include circle(5px, #fff);
-    margin: 0 12px;
+    @include circle(rem(5px), #fff);
+    margin: 0 rem(12px);
   }
   &:last-child:after {
     display: none;
@@ -24,7 +24,7 @@
 
 .navmenu__link {
   font-family: ubuntumedium;
-  font-size: 13px;
+  font-size: rem(13px);
   color:#ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -33,18 +33,21 @@
 .nav-hamburger {
   display: none;
   flex-direction: column;
-  margin-left: 30px;
+  margin-left: rem(30px);
 
   @include tablet {
     display: flex;
   }
+  @include phone {
+    display: flex;
+  }
 }
 .nav-hamburger__line {
-  height: 4px;
-  width: 24px;
-  margin-top: 2px;
-  margin-bottom: 4px; 
+  height: rem(4px);
+  width: rem(24px);
+  margin-top: rem(2px);
+  margin-bottom: rem(4px); 
   background: $white;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: rem(2px);
 }
