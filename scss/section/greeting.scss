@@ -26,13 +26,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .greeting__description {
   display: flex;
   flex-direction: column;
   align-content: center;
-  // justify-content: center;
+  @include tablet {
+    align-items: center;
+  }
 }
 
 .greeting__arrow {

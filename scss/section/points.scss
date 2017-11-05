@@ -4,6 +4,10 @@
   right: rem(50px);
   z-index: 200;
 
+  @include tablet {
+    display: none;
+  }
+
   &__item {
     display: block;
     border: rem(1px) solid transparent;

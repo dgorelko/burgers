@@ -72,11 +72,17 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .container {
+      width: 720px; } }
 
 .section {
   height: 100vh;
   min-height: 650px;
   background-color: rgba(0, 0, 0, 0.31); }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .section {
+      min-height: 1024px; } }
 
 .greeting {
   background-image: url("../images/bg/greeting.jpg");
@@ -110,6 +116,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .greeting__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .greeting__description {
   display: -webkit-box;
@@ -121,6 +133,11 @@ h1, h2, h3, h4, h5, h6 {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .greeting__description {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .greeting__arrow {
   position: absolute;
@@ -190,6 +207,9 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-right: 14px; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .navmenu-list {
+      display: none; } }
 
 .navmenu__item:after {
   display: inline-block;
@@ -217,6 +237,11 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 30px; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .nav-hamburger {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .nav-hamburger__line {
   height: 4px;
@@ -356,6 +381,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 6.25rem;
   right: 3.125rem;
   z-index: 200; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .points {
+      display: none; } }
   .points__item {
     display: block;
     border: 0.0625rem solid transparent;

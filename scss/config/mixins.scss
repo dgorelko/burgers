@@ -10,3 +10,14 @@
   @return $px / 16px+0rem;
 }
 
+@mixin tablet {
+  @media (min-width: #{480px}) and (max-width: #{$tablets - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: #{$phones}) and (max-width: #{480px - 1px}) {
+    @content;
+  }
+}
