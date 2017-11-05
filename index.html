@@ -277,7 +277,7 @@
             <div class="container form__container">
                 <span class="order__title">Закажите доставку</span>
                 <form action="/" class="form order__form" method="POST">
-                    <div class="form__column">
+                    <div class="form__column form__column-phone">
                         <div class="form__row">
                             <div class="form__column">
                                 <label for="name" class="form__label">Имя</label>
@@ -285,7 +285,7 @@
                             </div>
                             <div class="form__column">
                                 <label for="phone" class="form__label">Телефон</label>
-                                <input type="tel" class="form__input" id="phone" name="phone">
+                                <input type="tel" class="form__input" id="phone" name="phone" placeholder="89212264923">
                             </div>
                         </div>
                         <div class="form__row">
@@ -303,7 +303,7 @@
                                 <label for="housing" class="form__label">Корпус</label>
                                 <input type="text" class="form__input" id="housing" name="housing">
                             </div>
-                            <div class="form__column">
+                            <div class="form__column form__column-phone">
                                 <label for="room" class="form__label">Квартира</label>
                                 <input type="text" class="form__input" id="room" name="room">
                             </div>
@@ -330,7 +330,7 @@
                                 <label for="cart" class="form__label">Оплата по карте</label>
                             </div>
                         </div>
-                        <div class="form__row">
+                        <div class="form__row form__row-checkbox">
                             <input type="checkbox" value="call_no" id="call_no" name="call" class="form__checkbox">
                             <label for="call_no" class="form__label">Не перезванивать</label>
                         </div>

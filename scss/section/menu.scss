@@ -11,6 +11,9 @@
   position: absolute;
   top: 10%;
   left: 10%;
+  @include phone {
+    font-size: rem(50px);
+  }  
 }
 
 .menu-accordion__title {
@@ -42,7 +45,7 @@
 .menu-accordion__item_active .menu-accordion__description {
   width: rem(550px);
   @include phone {
-    width: rem(400px);
+    width: 100%;
   }
 }
 

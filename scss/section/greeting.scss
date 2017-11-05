@@ -7,7 +7,14 @@
 }
 
 .greeting__img {
+  margin-right: rem(12px);
+
+  @include tablet {
+    margin-right: 0;
+  }
+
  @include phone {
+   margin-right:0;
    width: rem(366px);
  }
 }
@@ -19,6 +26,10 @@
   font-family: gagalinregular;
   font-size: rem(72px);
   color: $yellow;
+
+  @include phone {
+    font-size: rem(63px);
+  }
 }
 
 .greeting__text {
@@ -30,6 +41,7 @@
     text-align: center;
   }
   @include phone {
+    font-size: rem(54px);
     text-align: center;
   }
 }
@@ -53,7 +65,15 @@
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin-top: rem(80px);
+
   @include tablet {
+    margin-top: 0;
+    align-items: center;
+  }
+
+  @include phone {
+    margin-top: 0;
     align-items: center;
   }
 }

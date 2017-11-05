@@ -12,6 +12,9 @@
   font-size: rem(72px);
   color: $dark-grey;
   text-transform: uppercase;
+  @include phone {
+    font-size: rem(50px);
+  }
 }
 .about-list {
   display: flex;
