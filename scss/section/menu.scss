@@ -42,7 +42,14 @@
 .menu-accordion__link {
   width: 80px;
   text-decoration: none;
-
+  &:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }
 
 .menu-accordion__title {
@@ -55,6 +62,7 @@
   top: 100%;
   margin-top: -150px;
   white-space: nowrap;
+  z-index: 2;
 }
 
 .menu-accordion__description {

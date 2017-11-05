@@ -548,6 +548,13 @@ h1, h2, h3, h4, h5, h6 {
 .menu-accordion__link {
   width: 80px;
   text-decoration: none; }
+  .menu-accordion__link:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7); }
 
 .menu-accordion__title {
   display: inline-block;
@@ -560,7 +567,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   top: 100%;
   margin-top: -150px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  z-index: 2; }
 
 .menu-accordion__description {
   width: 0;
