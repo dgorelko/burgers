@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
   .order__link:hover {
     background-color: #c13c18; }
 
-.menu-list {
+.navmenu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
           flex-direction: row;
   margin-right: 14px; }
 
-.menu__item:after {
+.navmenu__item:after {
   display: inline-block;
   vertical-align: middle;
   content: '';
@@ -200,10 +200,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2.5px;
   background-color: #fff;
   margin: 0 12px; }
-.menu__item:last-child:after {
+.navmenu__item:last-child:after {
   display: none; }
 
-.menu__link {
+.navmenu__link {
   font-family: ubuntumedium;
   font-size: 13px;
   color: #ffffff;

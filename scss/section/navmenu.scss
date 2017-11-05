@@ -1,10 +1,10 @@
-.menu-list {
+.navmenu-list {
   display: flex;
   flex-direction: row;
   margin-right: 14px;
 }
 
-.menu__item {
+.navmenu__item {
   // margin-right: 36px;
   &:after {
     display: inline-block;
@@ -18,7 +18,7 @@
   }
 }
 
-.menu__link {
+.navmenu__link {
   font-family: ubuntumedium;
   font-size: 13px;
   color:#ffffff;
