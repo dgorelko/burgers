@@ -104,6 +104,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: lifehackmedium;
   font-size: 65px;
   color: #fff; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .greeting__text {
+      max-width: 470px;
+      text-align: center; } }
 
 .greeting__content {
   height: 100%;
@@ -375,6 +379,11 @@ h1, h2, h3, h4, h5, h6 {
           flex: 4 0 25%;
   height: 50%;
   background-size: cover; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .reviews__item {
+      -webkit-box-flex: 4;
+          -ms-flex: 4 0 50%;
+              flex: 4 0 50%; } }
 
 .points {
   position: fixed;
@@ -438,17 +447,42 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 88px; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .team__container {
+      width: 100%;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-top: 123px;
+      padding-left: 0;
+      padding-right: 0; } }
 
 .team__title {
   font-family: "gagalinregular";
   font-size: 72px;
   color: #f9b43b;
   padding-bottom: 90px; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .team__title {
+      padding-bottom: 120px;
+      display: block; } }
 
 .team-accordion__item {
   padding-bottom: 40px; }
   .team-accordion__item:last-child {
     padding-bottom: 0; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .team-accordion__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .team-accordion__name {
   color: #fff;
@@ -475,6 +509,17 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 24px;
   height: 0;
   overflow: hidden; }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .team-accordion__content {
+      padding-left: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center; } }
 
 .team-accordion__pic {
   height: 100px;

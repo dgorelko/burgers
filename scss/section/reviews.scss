@@ -49,4 +49,7 @@
   flex: 4 0 25%;
   height: 50%;
   background-size: cover;
+  @include tablet {
+    flex: 4 0 50%;
+  }
 }
