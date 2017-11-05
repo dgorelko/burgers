@@ -461,6 +461,73 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-flexbox;
   display: flex; }
 
+.menu {
+  background: url("../images/bg/menu.jpg");
+  background-size: cover;
+  position: relative; }
+
+.menu__title {
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 10%; }
+
+.menu-accordion__title {
+  font-family: "gagalinregular";
+  font-size: 40px;
+  text-align: center;
+  color: #fff; }
+
+.menu-accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0; }
+
+.menu-accordion__item, .menu-accordion__link {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover; }
+
+.menu-accordion__item_active .menu-accordion__description {
+  width: 550px; }
+
+.menu-accordion__link {
+  width: 80px;
+  text-decoration: none; }
+
+.menu-accordion__title {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+          transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: -150px;
+  white-space: nowrap; }
+
+.menu-accordion__description {
+  width: 0;
+  background: rgba(47, 50, 52, 0.93);
+  overflow: hidden;
+  font-family: "ubuntulight";
+  font-size: 14px;
+  color: #fff; }
+
+.menu-accordion__text {
+  padding: 60px 30px; }
+
 .order {
   background-image: url("../images/bg/form.jpg");
   background-size: cover;
