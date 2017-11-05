@@ -1,0 +1,14 @@
+.order {
+  background-image: url("../images/bg/form.jpg");
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.order__title {
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: $yellow;
+  margin-bottom: 78px;
+}
