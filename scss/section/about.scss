@@ -42,6 +42,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: rem(34px);
+  @include phone {
+    width: rem(100px);
+    height: rem(100px);
+  }
 }
 
 .about__img{
