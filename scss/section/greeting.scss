@@ -1,9 +1,22 @@
 .greeting   {
   background-image: url("../images/bg/greeting.jpg");
   background-size: cover;
-  padding-top: 12px;
+  padding-top: rem(12px);
   box-sizing: border-box;
   position: relative;
+}
+
+.greeting__img {
+  margin-right: rem(12px);
+
+  @include tablet {
+    margin-right: 0;
+  }
+
+ @include phone {
+   margin-right:0;
+   width: rem(366px);
+ }
 }
 
 .greeting__container {
@@ -11,32 +24,68 @@
 }
 .greeting__title {
   font-family: gagalinregular;
-  font-size: 72px;
+  font-size: rem(72px);
   color: $yellow;
+
+  @include phone {
+    font-size: rem(63px);
+  }
 }
 
 .greeting__text {
   font-family: lifehackmedium;
-  font-size: 65px;
+  font-size: rem(65px);
   color: $white;
+  @include tablet {
+    max-width: rem(470px);
+    text-align: center;
+  }
+  @include phone {
+    font-size: rem(54px);
+    text-align: center;
+  }
 }
 
 .greeting__content {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include tablet {
+    flex-direction: column;
+  }
+  @include phone {
+    flex-direction: column;
+    height: initial;
+  }
 }
 
 .greeting__description {
   display: flex;
   flex-direction: column;
   align-content: center;
-  // justify-content: center;
+  margin-top: rem(80px);
+
+  @include tablet {
+    margin-top: 0;
+    align-items: center;
+  }
+
+  @include phone {
+    margin-top: 0;
+    align-items: center;
+  }
 }
 
 .greeting__arrow {
   position: absolute;
-  bottom: 42px;
+  bottom: rem(42px);
   left: 50%;
   transform: translateX(-50%);
+}
+
+.burger__img {
+  max-height: 100%;
+  max-width: 100%;
 }

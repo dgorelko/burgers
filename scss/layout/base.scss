@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   color: $dark-grey;
   -webkit-font-smoothing: antialiased;
@@ -24,6 +24,7 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  font-weight: normal;
 }
 
 .wrapper {
@@ -34,14 +35,22 @@ h1, h2, h3, h4, h5, h6 {
 
 // .maincontent {
 //   height: 100%;
-//   min-height: 650px;
+//   min-height: rem(650px);
 // }
 
 .container {
-  width: 940px;
   margin: 0 auto;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: column;
+  padding: 0 rem(10px);
+  position: relative;
+  width: rem(940px);
+  display: flex;
+  flex-direction: column;
+  
+  @include tablet {
+    width: rem(720px);
+  }
+  
+  @include phone {
+    width: rem(460px);
+  }
 }

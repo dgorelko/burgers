@@ -4,6 +4,10 @@
   right: rem(50px);
   z-index: 200;
 
+  @include tablet {
+    display: none;
+  }
+
   &__item {
     display: block;
     border: rem(1px) solid transparent;
@@ -27,8 +31,8 @@
   }
 
   &__link {
-    height: 16px;
-    width: 16px;
+    height: rem(16px);
+    width: rem(16px);
     display: block;
     @include circle(rem(6px), $white);
     position: absolute;

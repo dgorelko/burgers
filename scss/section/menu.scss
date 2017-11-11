@@ -1,27 +1,89 @@
-.menu-list {
+.menu {
+  background: url("../images/bg/menu.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.menu__title {
+  font-family: "gagalinregular";
+  font-size: rem(72px);
+  color: $white;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  @include phone {
+    font-size: rem(50px);
+  }  
+}
+
+.menu-accordion__title {
+  font-family: "gagalinregular";
+  font-size: rem(40px);
+  text-align: center;
+  color: $white;
+}
+
+.menu-accordion {
   display: flex;
-  flex-direction: row;
-  margin-right: 14px;
-}
-
-.menu__item {
-  // margin-right: 36px;
-  &:after {
-    display: inline-block;
-    vertical-align: middle;
-    content: '';
-    @include circle(5px, #fff);
-    margin: 0 12px;
-  }
-  &:last-child:after {
-    display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  @include phone {
+    right: 0;
+    left: 0;
   }
 }
 
-.menu__link {
-  font-family: ubuntumedium;
-  font-size: 13px;
-  color:#ffffff;
+.menu-accordion__item, .menu-accordion__link {
+  height: 100%;
+  position: relative;
+  display: flex;
+  background-size: cover;
+}
+
+.menu-accordion__item_active .menu-accordion__description {
+  width: rem(550px);
+  @include phone {
+    width: 100%;
+  }
+}
+
+.menu-accordion__link {
+  width: rem(80px);
   text-decoration: none;
-  text-transform: uppercase;
+  &:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.menu-accordion__title {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-150px);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.menu-accordion__description {
+  width: 0;
+  background: rgba($dark-grey, .93);
+  overflow: hidden;
+  font-family: "ubuntulight";
+  font-size: rem(14px);
+  color: $white;
+}
+
+.menu-accordion__text {
+  padding: rem(60px) rem(30px);
 }

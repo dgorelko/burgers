@@ -1,0 +1,154 @@
+.team {
+  background: url("../images/bg/team.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team__container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: rgba($dark-grey, .93);
+  padding-left: rem(80px);
+  display: flex;
+  flex-direction: column;
+  padding-top: rem(88px);
+  @include tablet {
+    width: 100%;
+    align-items: center;
+    padding-top: rem(123px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include phone {
+    width: 100%;
+    align-items: center;
+    padding-top: rem(65px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.team__title {
+  font-family: "gagalinregular";
+  font-size: rem(72px);
+  color: $yellow;
+  padding-bottom: rem(90px);
+
+  @include tablet {
+    padding-bottom: rem(120px);
+    display: block;
+  }
+
+  @include phone {
+    font-size: rem(50px);
+    padding-bottom: rem(80px);
+    text-align: center;
+    display: block;
+  }
+}
+.team-accordion__item {
+  padding-bottom: rem(40px);
+  &:last-child {
+    padding-bottom: 0;
+  }
+  @include tablet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  @include phone {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: rem(35px);
+  }
+}
+
+.team-accordion__name{
+  color: $white;
+  font-family: "gagalinregular";
+  font-size: rem(14px);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: "";
+    height: 0;
+    width: 0;
+    margin-right: rem(8px);
+    border: rem(9px) solid transparent;
+    border-top-color: $yellow;
+    border-bottom-width: rem(0px);
+
+  }
+}
+
+.team-accordion__content {
+  padding-top: rem(15px);
+  padding-left: rem(24px);
+  height: 0;
+  overflow: hidden;
+  @include tablet {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+  }
+  @include phone {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+  }
+}
+
+.team-accordion__pic {
+ height: rem(100px);
+ width: rem(100px);
+ overflow: hidden;
+ border-radius: 50%;
+}
+
+.team-accordion__img {
+  height: 100%;
+  width: 100%; 
+}
+
+.team-accordion__text {
+  color: $white;
+  width: rem(260px);
+  padding-left: rem(20px);
+  &-title {
+    font-family: "ubuntubold";
+  }
+  &-content {
+    font-family: "ubuntulight";
+  }
+  @include tablet {
+    padding-left: 0;
+    padding-top: rem(20px);
+  }
+
+  @include phone {
+    padding-left: 0;
+    padding-top: rem(20px);
+  }
+
+}
+
+.team-accordion__item_active {
+  .team-accordion__name {
+    color: $yellow;
+    &:before {
+      transform: rotate(-180deg);
+    }
+  }
+  .team-accordion__content {
+    height: 100%;
+    display: flex;
+  }
+}

@@ -6,6 +6,10 @@ $yellow: #f9b43b;
 $orange: #e45028;
 $green: #8ac03e;
 
-$container_width: 960px;
+$container_width: rem(960px);
 $section_height: 100vh;
-$section_minheight: 650px;
+$section_minheight: rem(650px);
+
+//adaptive
+$tablets: rem(768px);
+$phones: rem(480px);

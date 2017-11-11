@@ -16,8 +16,8 @@
 
 .logo {
   display: inline-block;
-  height: 74px;
-  width: 98px;
+  height: rem(74px);
+  width: rem(98px);
 }
 
 .logo__img {
@@ -25,13 +25,13 @@
   max-width: 100%;
 }
 .order__link {
-  padding: 10px 17px;
-  border-radius: 5px;
+  padding: rem(10px) rem(17px);
+  border-radius: rem(5px);
   background-color: $orange;
   color: #fff;
   text-decoration: none;
   font-family: ubuntumedium;
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 1.42;
   text-transform: uppercase;
   transition: .5s;
