@@ -43,7 +43,7 @@
 }
 
 .menu-accordion__item_active .menu-accordion__description {
-  width: rem(550px);
+  width: 100%;
   @include phone {
     width: 100%;
   }

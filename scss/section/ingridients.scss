@@ -79,6 +79,19 @@
   }
 }
 
+@include tablet {
+.ingridients-list:after {
+  position: absolute;
+  display: block;
+  content: '';
+  background: url(../images/icons/krest.svg);
+  width: rem(20px);
+  height: rem(20px);
+  top: rem(15px);
+  right: rem(15px);
+}
+}
+
 .ingridients__item {
   display: flex;
   flex-direction: row;
