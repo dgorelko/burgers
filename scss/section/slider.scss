@@ -1,0 +1,116 @@
+.slider {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9b43b+0,eb8e38+50,f9b43b+100 */
+  background: #f9b43b; /* Old browsers */
+  background: -moz-linear-gradient(top, #f9b43b 0%, #eb8e38 50%, #f9b43b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9b43b 0%,#eb8e38 50%,#f9b43b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f9b43b 0%,#eb8e38 50%,#f9b43b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
+  display: flex;
+  align-items: center;
+  position: relative
+}
+
+.slider__container {
+  @include tablet {
+    width: 576px;
+  }
+  @include phone {
+    width: 386px;
+  }
+}
+
+.slider__arrow {
+  position: absolute;
+  top: 50%;
+  &_left {
+    transform: rotate(90deg);
+    left: 45px;
+  }
+  &_right {
+    transform: rotate(-90deg);
+    right: 45px;
+  }
+}
+
+.slider__item {
+  display: flex;
+  height: 100%;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.slider__column {
+  position: relative;
+  flex: 1 0 50%;
+  @include tablet {
+    display: flex;
+    text-align: center;
+    flex-direction: column; 
+  }
+}
+
+.burger {
+  width: 100%;
+  margin-top: 72px;
+}
+
+.slider__title {
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: $white;
+  line-height: 1;
+  @include phone {
+    font-size: 50px;
+  }
+}
+
+.slider__description {
+  font-family: "ubuntulight";
+  color: $white;
+  font-size: 14px;
+  margin: 40px 0 20px 0;
+}
+
+.slider__price, .slider__currency {
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: $orange;
+  @include phone {
+    font-size: 50px;
+  }
+}
+
+.slider__currency {
+  font-size: 30px;
+  margin-right: 30px;
+  @include phone {
+    font-size: 24px;
+  }
+}
+
+.slider__btn {
+  text-transform: uppercase;
+  padding: 13px 16px;
+  border-radius: 3px;
+  background-color: $orange;
+  font-family: "ubuntulight";
+  color: $white;
+  font-size: 14px;
+  text-decoration: none;
+  vertical-align: baseline;
+  &:hover{
+    background-color: darken($orange, 10%);
+    cursor: pointer;
+  }
+
+  @include tablet {
+    padding: 12px 16px;
+  }
+  @include phone {
+    padding: 11px 15px;
+    vertical-align: text-bottom;
+  }
+}

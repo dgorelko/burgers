@@ -270,9 +270,9 @@ h1, h2, h3, h4, h5, h6 {
   display: none; }
 
 .navmenu__link {
-  font-family: ubuntumedium;
+  font-family: "ubuntumedium";
   font-size: 0.8125rem;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase; }
 
@@ -371,6 +371,10 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 2.125rem; }
+  @media (max-width: 30rem) {
+    .about__icon {
+      width: 6.25rem;
+      height: 6.25rem; } }
 
 .about__img {
   max-width: 100%;
@@ -392,6 +396,302 @@ h1, h2, h3, h4, h5, h6 {
   .about__info {
     text-align: left;
     margin-left: 1.5625rem; } }
+
+.slider {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9b43b+0,eb8e38+50,f9b43b+100 */
+  background: #f9b43b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(50%, #eb8e38), to(#f9b43b));
+  background: linear-gradient(to bottom, #f9b43b 0%, #eb8e38 50%, #f9b43b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 );
+  /* IE6-9 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative; }
+
+@media (max-width: 48rem) {
+  .slider__container {
+    width: 576px; } }
+@media (max-width: 30rem) {
+  .slider__container {
+    width: 386px; } }
+
+.slider__arrow {
+  position: absolute;
+  top: 50%; }
+  .slider__arrow_left {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    left: 45px; }
+  .slider__arrow_right {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    right: 45px; }
+
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%; }
+  @media (max-width: 48rem) {
+    .slider__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: 100%; } }
+
+.slider__column {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%; }
+  @media (max-width: 48rem) {
+    .slider__column {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.burger {
+  width: 100%;
+  margin-top: 72px; }
+
+.slider__title {
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: #fff;
+  line-height: 1; }
+  @media (max-width: 30rem) {
+    .slider__title {
+      font-size: 50px; } }
+
+.slider__description {
+  font-family: "ubuntulight";
+  color: #fff;
+  font-size: 14px;
+  margin: 40px 0 20px 0; }
+
+.slider__price, .slider__currency {
+  font-family: "gagalinregular";
+  font-size: 72px;
+  color: #e45028; }
+  @media (max-width: 30rem) {
+    .slider__price, .slider__currency {
+      font-size: 50px; } }
+
+.slider__currency {
+  font-size: 30px;
+  margin-right: 30px; }
+  @media (max-width: 30rem) {
+    .slider__currency {
+      font-size: 24px; } }
+
+.slider__btn {
+  text-transform: uppercase;
+  padding: 13px 16px;
+  border-radius: 3px;
+  background-color: #e45028;
+  font-family: "ubuntulight";
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  vertical-align: baseline; }
+  .slider__btn:hover {
+    background-color: #c13c18;
+    cursor: pointer; }
+  @media (max-width: 48rem) {
+    .slider__btn {
+      padding: 12px 16px; } }
+  @media (max-width: 30rem) {
+    .slider__btn {
+      padding: 11px 15px;
+      vertical-align: text-bottom; } }
+
+.ingridients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  top: 0; }
+  @media (max-width: 30rem) {
+    .ingridients {
+      right: -50px;
+      z-index: 200; } }
+
+.ingridients__trigger {
+  border-radius: 4px;
+  background-color: #f9b43b;
+  padding: 14px 22px 32px 22px;
+  text-align: center; }
+  .ingridients__trigger:hover {
+    background-color: #e45028; }
+
+.ingridients__trigger:hover + .ingridients-list {
+  visibility: visible; }
+
+.ingridients__text {
+  font-family: "gagalinregular";
+  font-size: 14px;
+  color: #fff; }
+
+.ingridients-list {
+  visibility: hidden;
+  border-radius: 4px;
+  background-color: #fff;
+  opacity: 0.9;
+  padding: 18px 22px;
+  margin: 0;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 270px;
+  position: relative; }
+  .ingridients-list:hover {
+    visibility: visible; }
+  @media (max-width: 48rem) {
+    .ingridients-list {
+      width: 320px;
+      padding: 18px 62px 18px 25px; } }
+  @media (max-width: 30rem) {
+    .ingridients-list {
+      width: 370px;
+      padding: 18px 62px 18px 25px; } }
+
+.ingridients__close {
+  position: absolute;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (max-width: 48rem) {
+    .ingridients__close {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      right: 15px; } }
+
+.ingridients__close__line {
+  height: 0.25rem;
+  width: 1.125rem;
+  background: #e45028;
+  display: inline-block;
+  border-radius: 0.125rem; }
+  .ingridients__close__line:first-child {
+    -webkit-transform: rotate(45deg) translateY(3px) translateX(1px);
+            transform: rotate(45deg) translateY(3px) translateX(1px); }
+  .ingridients__close__line:last-child {
+    -webkit-transform: rotate(-45deg) translateY(-2px);
+            transform: rotate(-45deg) translateY(-2px); }
+
+.ingridients__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 18px; }
+  .ingridients__item:last-child {
+    margin-bottom: 0; }
+
+.ingridients__name {
+  font-family: "ubuntumedium";
+  font-size: 14px;
+  color: #2f3234; }
+
+.ingridients__size {
+  font-family: "ubuntulight";
+  color: #2f3234;
+  font-size: 14px; }
+
+.ingridients__picture {
+  width: 42px;
+  height: 38px; }
+
+.ingridients__image {
+  width: 100%;
+  height: 100%; }
+
+.ingridients__icon {
+  width: 46px;
+  height: 42px; }
+
+.kilocalories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute; }
+  @media (max-width: 48rem) {
+    .kilocalories {
+      right: 0; } }
+  @media (max-width: 30rem) {
+    .kilocalories {
+      right: -45px; } }
+
+.kilocalories__icon {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative; }
+
+.kilocalories__size {
+  font-family: "gagalinregular";
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 23%; }
+
+.kilocalories__text {
+  font-family: "gagalinregular";
+  font-size: 14px;
+  color: #fff; }
+
+.kilocalories__image {
+  width: 100%;
+  height: 100%; }
 
 .reviews-list {
   margin: 0;

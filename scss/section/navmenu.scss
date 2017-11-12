@@ -23,9 +23,9 @@
 }
 
 .navmenu__link {
-  font-family: ubuntumedium;
+  font-family: "ubuntumedium";
   font-size: rem(13px);
-  color:#ffffff;
+  color: $white;
   text-decoration: none;
   text-transform: uppercase;
 }
