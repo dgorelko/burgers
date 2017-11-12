@@ -22,6 +22,48 @@
 .greeting__container {
   height: 100%;
 }
+
+.greeting__menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba($dark-grey, .99);
+  display: none;
+  z-index:400;
+}
+.greeting__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(273px);
+}
+
+.greeting__menu__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:after {
+    display: block;
+    content: '';
+    @include circle(rem(5px), #fff);
+    margin: rem(12px) 0;
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+.greeting__menu__link {
+  font-family: "ubunturegular";
+  font-size: rem(24px);
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .greeting__title {
   font-family: gagalinregular;
   font-size: rem(72px);

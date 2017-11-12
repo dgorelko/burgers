@@ -111,6 +111,62 @@ h1, h2, h3, h4, h5, h6 {
 .greeting__container {
   height: 100%; }
 
+.greeting__menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(47, 50, 52, 0.99);
+  display: none;
+  z-index: 400; }
+
+.greeting__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 17.0625rem; }
+
+.greeting__menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .greeting__menu__item:after {
+    display: block;
+    content: '';
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-radius: 0.15625rem;
+    background-color: #fff;
+    margin: 0.75rem 0; }
+  .greeting__menu__item:last-child:after {
+    display: none; }
+
+.greeting__menu__link {
+  font-family: "ubunturegular";
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase; }
+
 .greeting__title {
   font-family: gagalinregular;
   font-size: 4.5rem;
@@ -204,6 +260,9 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.header__logo {
+  z-index: 450; }
+
 .header__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,7 +341,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 1.875rem; }
+  margin-left: 1.875rem;
+  z-index: 450; }
   @media (max-width: 48rem) {
     .nav-hamburger {
       display: -webkit-box;
@@ -301,7 +361,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.25rem;
   background: #fff;
   display: inline-block;
-  border-radius: 0.125rem; }
+  border-radius: 0.125rem;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear; }
+
+.nav-hamburger_active .nav-hamburger__line:nth-child(2n+0) {
+  opacity: 0; }
+
+.nav-hamburger_active .nav-hamburger__line:nth-child(1n+0) {
+  -webkit-transform: rotate(45deg) translateY(14px);
+          transform: rotate(45deg) translateY(14px); }
+
+.nav-hamburger_active .nav-hamburger__line:nth-child(3n+0) {
+  -webkit-transform: rotate(-45deg) translateY(-14px);
+          transform: rotate(-45deg) translateY(-14px); }
 
 .about {
   background-image: url("../images/bg/about.jpg");
