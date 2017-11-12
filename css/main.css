@@ -668,19 +668,6 @@ h1, h2, h3, h4, h5, h6 {
       display: flex;
       right: 15px; } }
 
-.ingridients__close__line {
-  height: 0.25rem;
-  width: 1.125rem;
-  background: #e45028;
-  display: inline-block;
-  border-radius: 0.125rem; }
-  .ingridients__close__line:first-child {
-    -webkit-transform: rotate(45deg) translateY(3px) translateX(1px);
-            transform: rotate(45deg) translateY(3px) translateX(1px); }
-  .ingridients__close__line:last-child {
-    -webkit-transform: rotate(-45deg) translateY(-2px);
-            transform: rotate(-45deg) translateY(-2px); }
-
 @media (max-width: 48rem) {
   .ingridients-list:after {
     position: absolute;

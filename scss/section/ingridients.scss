@@ -65,20 +65,6 @@
   }
 }
 
-.ingridients__close__line {
-  height: rem(4px);
-  width: rem(18px);
-  background: $orange;
-  display: inline-block;
-  border-radius: rem(2px);
-  &:first-child {
-    transform: rotate(45deg) translateY(3px) translateX(1px);
-  }
-  &:last-child {
-    transform: rotate(-45deg) translateY(-2px);
-  }
-}
-
 @include tablet {
 .ingridients-list:after {
   position: absolute;
