@@ -43,7 +43,12 @@
 }
 
 .menu-accordion__item_active .menu-accordion__description {
-  width: 100%;
+  width: rem(550px);
+
+  @include tablet {
+    width: 100%;
+  }
+
   @include phone {
     width: 100%;
   }

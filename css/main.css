@@ -1094,7 +1094,10 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover; }
 
 .menu-accordion__item_active .menu-accordion__description {
-  width: 100%; }
+  width: 34.375rem; }
+  @media (max-width: 48rem) {
+    .menu-accordion__item_active .menu-accordion__description {
+      width: 100%; } }
   @media (max-width: 30rem) {
     .menu-accordion__item_active .menu-accordion__description {
       width: 100%; } }
