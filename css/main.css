@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
       width: inherit; } }
   @media (max-width: 30rem) {
     .container {
-      width: inherit; } }
+      width: 95%; } }
 
 .section {
   height: 100vh;
@@ -1167,21 +1167,20 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  width: 100%; }
   @media (max-width: 48rem) {
     .form {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column;
-      width: 29.5rem; } }
-  @media (max-width: 48rem) {
+              flex-direction: column; } }
+  @media (max-width: 30rem) {
     .form {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column;
-      width: 28.75rem; } }
+              flex-direction: column; } }
 
 @media (max-width: 48rem) {
   .form__container {
@@ -1254,7 +1253,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form__input-textarea {
   height: 6.8125rem;
-  width: 28.75rem;
+  width: 100%;
   resize: none; }
 
 .form__checkbox {
