@@ -1,0 +1,40 @@
+.kilocalories {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: absolute;
+
+  @include tablet {
+    right: 0;
+  }
+  @include phone {
+    right: -45px;
+  }
+}
+
+.kilocalories__icon {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.kilocalories__size {
+  font-family: "gagalinregular";
+  font-size: 20px;
+  color: $white;
+  position: absolute;
+  top: 35%;
+  left: 23%;
+}
+
+.kilocalories__text {
+  font-family: "gagalinregular";
+  font-size: 14px;
+  color: $white;
+}
+
+.kilocalories__image{
+  width: 100%;
+  height: 100%;
+}

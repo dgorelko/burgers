@@ -16,6 +16,16 @@
         <div class="maincontent">
           <!-- greeting section -->  
           <section class="section greeting" id="greeting-section">
+            <div class="greeting__menu">
+                  <ul class="greeting__menu-list">
+                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">почему мы</a></li>
+                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">меню</a></li>
+                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">советы</a></li>
+                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">кто мы</a></li>
+                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">свяжитесь с нами</a></li>
+                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">контакты</a></li>
+                  </ul>
+            </div>
             <div class="container greeting__container">
               <header class="header">
                 <div class="header__logo">
@@ -25,11 +35,11 @@
                 </div>
                 <nav class="header__menu">
                   <ul class="navmenu-list">
-                    <li class="navmenu__item"><a href="#about-section" class="navmenu__link">о нас</a></li>
+                    <li class="navmenu__item"><a href="#" class="navmenu__link">о нас</a></li>
                     <li class="navmenu__item"><a href="#" class="navmenu__link">бургеры</a></li>
                     <li class="navmenu__item"><a href="#" class="navmenu__link">команда</a></li>
                     <li class="navmenu__item"><a href="#" class="navmenu__link">меню</a></li>
-                    <li class="navmenu__item"><a href="#reviews-section" class="navmenu__link">отзывы</a></li>
+                    <li class="navmenu__item"><a href="#" class="navmenu__link">отзывы</a></li>
                     <li class="navmenu__item"><a href="#" class="navmenu__link">контакты</a></li>
                   </ul>
                   <div class="header__btn"><a href="#" class="order__link">Заказать</a></div>
@@ -38,6 +48,7 @@
                     <span class="nav-hamburger__line"></span>
                     <span class="nav-hamburger__line"></span>
                   </div>
+
                 </nav>               
               </header>
 
@@ -92,9 +103,100 @@
                           Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
                       </p>
                     </div>
-                    </li>
+                  </li>
               </ul>
             </div>
+          </section>
+
+          <!-- slider section -->
+          <section class="section slider">
+              <a href="#" class="slider__arrow slider__arrow_left">
+                  <img src="./images/icons/arrow-scroll.svg" alt="arrow" class="arrow__image">
+              </a>
+            <div class="container slider__container">
+              <div class="slider__item">
+                <div class="slider__column">
+                  <div class="ingridients">
+
+                    <div class="ingridients__trigger">
+                      <div class="ingridients__icon">
+                        <img src="./images/icons/burger.svg" alt="Состав" class="ingridients__image">
+                        <span class="ingridients__text">Состав</span>
+                      </div>
+                    </div>
+                    <ul class="ingridients-list">
+                        <li class="ingridients__item">
+                            <div class="ingridients__picture">
+                                <img src="./images/icons/beef.svg" alt="Говядина" class="ingridients__image">
+                            </div>
+                            <span class="ingridients__name">Говядина</span>
+                            <span class="ingridients__size">300 г</span>
+                        </li>
+                        <li class="ingridients__item">
+                            <div class="ingridients__picture">
+                                <img src="./images/icons/buns.svg" alt="Булочки" class="ingridients__image">
+                            </div>
+                            <span class="ingridients__name">Булочки</span>
+                            <span class="ingridients__size">100 г</span>
+                        </li>
+                        <li class="ingridients__item">
+                            <div class="ingridients__picture">
+                                <img src="./images/icons/salad.svg" alt="Зелень" class="ingridients__image">
+                            </div>
+                            <span class="ingridients__name">Зелень</span>
+                            <span class="ingridients__size">70 г</span>
+                        </li>
+                        <li class="ingridients__item">
+                            <div class="ingridients__picture">
+                                <img src="./images/icons/sauce.svg" alt="Соус" class="ingridients__image">
+                            </div>
+                            <span class="ingridients__name">Соус</span>
+                            <span class="ingridients__size">150 г</span>
+                        </li>
+                        <li class="ingridients__item">
+                            <div class="ingridients__picture">
+                                <img src="./images/icons/cucumber.svg" alt="Овощи" class="ingridients__image">
+                            </div>
+                            <span class="ingridients__name">Овощи</span>
+                            <span class="ingridients__size">200 г</span>
+                        </li>
+                        <li class="ingridients__item">
+                            <div class="ingridients__picture">
+                                <img src="./images/icons/cheese.svg" alt="Сыр" class="ingridients__image">
+                            </div>
+                            <span class="ingridients__name">Сыр</span>
+                            <span class="ingridients__size">80 г</span>
+                        </li>
+                    </ul> 
+                  </div>
+                  <div class="burger">
+                    <img src="./images/content/blackburg.png" alt="" class="burger__img">
+                  </div>
+                  <div class="kilocalories">
+                      <div class="kilocalories__icon">
+                        <img src="./images/icons/kkal.svg" alt="Килокалории" class="kilocalories__image">
+                          <span class="kilocalories__size">1200</span>
+                          <span class="kilocalories__text">ккал</span>
+                      </div> 
+                    </div>
+                </div>
+                <div class="slider__column">
+                  <span class="slider__title">Dark BEEF Burger</span>
+                  <p class="slider__description">Ваш старый добрый знакомый, с 
+                    рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, 
+                    двумя помидорами, луком, салатом и соусом гриль теперь с добавлением 
+                    экзотического соуса чураско.</p>
+                  <div class="slider__information">
+                    <span class="slider__price">500</span>
+                    <span class="slider__currency">рублей</span>
+                    <a href="#" class="slider__btn">Заказать</a>  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="slider__arrow slider__arrow_right">
+                <img src="./images/icons/arrow-scroll.svg" alt="arrow" class="arrow__image">
+            </a>
           </section>
 
           <!-- team section -->
@@ -416,5 +518,6 @@
             </ul>
         </div>
     </div>
+  <script src="./js/main.js"></script>
 </body>
 </html>

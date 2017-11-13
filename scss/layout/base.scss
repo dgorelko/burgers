@@ -47,10 +47,10 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   
   @include tablet {
-    width: rem(720px);
+    width: inherit;
   }
   
   @include phone {
-    width: rem(460px);
+    width: inherit;
   }
 }
