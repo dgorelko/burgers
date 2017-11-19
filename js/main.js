@@ -55,4 +55,58 @@ $(".maincontent").onepage_scroll({
             // Options will go here
       });
 
+//Yandex Map
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;    
+    
+    function init(){     
+        myMap = new ymaps.Map("yandexmap", {
+            center: [59.94057299, 30.31072784],
+            zoom: 12,
+            controls: []
+            });
+        
+        myMap.behaviors.disable('scrollZoom');
+
+        myPlacemark1 = new ymaps.Placemark([59.97025753, 30.31517629], {
+                hintContent: 'Москва!',
+                balloonContent: 'Столица России'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './images/icons/map-marker.svg'
+        });
+        
+        myPlacemark2 = new ymaps.Placemark([59.94560494, 30.38918380], {
+            hintContent: 'Москва!',
+            balloonContent: 'Столица России'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: './images/icons/map-marker.svg'
+        });
+
+        myPlacemark3 = new ymaps.Placemark([59.91173819, 30.50006632], {
+            hintContent: 'Москва!',
+            balloonContent: 'Столица России'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: './images/icons/map-marker.svg'
+        });
+
+        myPlacemark4 = new ymaps.Placemark([59.88712818, 30.31918887], {
+            hintContent: 'Москва!',
+            balloonContent: 'Столица России'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: './images/icons/map-marker.svg'
+        });
+
+        myMap.geoObjects.add(myPlacemark1)
+                        .add(myPlacemark2)
+                        .add(myPlacemark3)
+                        .add(myPlacemark4);
+        
+    }
+
+
 });
