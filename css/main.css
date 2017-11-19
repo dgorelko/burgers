@@ -615,7 +615,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 0; }
   @media (max-width: 30rem) {
     .ingridients {
-      right: -50px;
+      top: 0;
+      left: 0;
       z-index: 200; } }
 
 .ingridients__trigger {
@@ -736,10 +737,12 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0; }
   @media (max-width: 48rem) {
     .kilocalories {
-      right: 0; } }
+      right: 0;
+      top: 0.375rem; } }
   @media (max-width: 30rem) {
     .kilocalories {
-      right: -45px; } }
+      right: 0;
+      top: 0.375rem; } }
 
 .kilocalories__icon {
   text-align: center;
@@ -1418,6 +1421,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.8125rem 1rem;
   border-radius: 0.1875rem;
   background-color: #e45028; }
+
+.map {
+  position: relative; }
 
 .map__yandex {
   width: 100%;
