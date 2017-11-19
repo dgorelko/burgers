@@ -796,12 +796,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-family: "gagalinregular";
   margin: 0 0 1.9375rem 0; }
+  .reviews__name_popup {
+    font-size: 0.875rem;
+    font-family: "gagalinregular";
+    color: #2f3234; }
 
 .reviews__text {
   font-family: "ubuntulight";
   font-size: 0.875rem;
   color: #fff;
   margin: 0 0 1.0625rem 0; }
+  .reviews__text_popup {
+    font-family: "ubuntulight";
+    font-size: 0.875rem;
+    color: #2f3234; }
   @media (max-width: 30rem) {
     .reviews__text {
       display: none; } }
@@ -840,6 +848,20 @@ h1, h2, h3, h4, h5, h6 {
           -ms-flex: 4 0 25%;
               flex: 4 0 25%;
       height: 25%; } }
+
+.reviews__popup {
+  display: none;
+  width: 29.5rem;
+  border-radius: 0.25rem; }
+  @media (max-width: 30rem) {
+    .reviews__popup {
+      width: 28.75rem; } }
+
+.fancybox-close-small:hover:after {
+  color: #ec8468; }
+
+.fancybox-close-small:after {
+  color: #ec8468; }
 
 .points {
   position: fixed;

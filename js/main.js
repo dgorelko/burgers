@@ -50,4 +50,9 @@ $(".maincontent").onepage_scroll({
           owl.trigger('prev.owl.carousel', [300]);
       })
 
+//fancybox
+      $("[data-fancybox]").fancybox({
+            // Options will go here
+      });
+
 });
