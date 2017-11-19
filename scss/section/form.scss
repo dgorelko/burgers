@@ -11,10 +11,18 @@
   }
 }
 
+.order__form {
+  @include tablet {
+    padding: 0 13%;
+  }
+  @include phone {
+    padding: 0;
+  }
+}
+
 .form__container {
   @include tablet {
     display: flex;
-    width: rem(550px);
     align-items: center;
   }
 }
