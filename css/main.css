@@ -93,6 +93,17 @@ h1, h2, h3, h4, h5, h6 {
     .section {
       min-height: 50rem; } }
 
+.onepage-wrapper .section {
+  height: 100vh;
+  min-height: 40.625rem;
+  background-color: rgba(0, 0, 0, 0.31); }
+  @media (max-width: 48rem) {
+    .onepage-wrapper .section {
+      min-height: 64rem; } }
+  @media (max-width: 30rem) {
+    .onepage-wrapper .section {
+      min-height: 50rem; } }
+
 .greeting {
   background-image: url("../images/bg/greeting.jpg");
   background-size: cover;
@@ -1227,6 +1238,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4.5rem;
   color: #f9b43b;
   margin-bottom: 4.875rem; }
+  @media (max-width: 48rem) {
+    .order__title {
+      font-size: 3.125rem; } }
   @media (max-width: 30rem) {
     .order__title {
       font-size: 3.125rem;
@@ -1260,6 +1274,7 @@ h1, h2, h3, h4, h5, h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 34.375rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; } }
@@ -1426,6 +1441,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative; }
 
 .map__yandex {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 100%; }
 

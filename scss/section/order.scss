@@ -11,6 +11,9 @@
   font-size: rem(72px);
   color: $yellow;
   margin-bottom: rem(78px);
+  @include tablet {
+    font-size: rem(50px);
+  }
   @include phone {
     font-size: rem(50px);
     margin-bottom: rem(33px);
