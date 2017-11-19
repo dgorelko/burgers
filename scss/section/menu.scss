@@ -54,9 +54,14 @@
   }
 }
 
+.menu-accordion__item_active .menu-accordion__title {
+  color: $yellow;
+}
+
 .menu-accordion__link {
   width: rem(80px);
   text-decoration: none;
+  background-position: bottom;
   &:after {
     position: absolute;
     height: 100%;

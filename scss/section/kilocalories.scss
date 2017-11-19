@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: flex-start;
   position: absolute;
+  bottom: 0;
 
   @include tablet {
     right: 0;

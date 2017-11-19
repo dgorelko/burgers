@@ -60,6 +60,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   position: relative; }
 
+.maincontent {
+  height: 100%; }
+
 .container {
   margin: 0 auto;
   padding: 0 0.625rem;
@@ -729,7 +732,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  position: absolute; }
+  position: absolute;
+  bottom: 0; }
   @media (max-width: 48rem) {
     .kilocalories {
       right: 0; } }
@@ -877,6 +881,46 @@ h1, h2, h3, h4, h5, h6 {
             transform: translate(-50%, -50%);
     -webkit-transition: color 0.5s;
     transition: color 0.5s; }
+
+.onepage-pagination {
+  position: fixed;
+  top: 6.25rem;
+  right: 3.125rem;
+  z-index: 200; }
+  @media (max-width: 48rem) {
+    .onepage-pagination {
+      display: none; } }
+  @media (max-width: 30rem) {
+    .onepage-pagination {
+      display: none; } }
+
+.onepage-pagination li a:before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+
+.onepage-pagination li a.active:before {
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: 1px solid white;
+  margin-top: -5px;
+  left: 5px; }
+
+.onepage-pagination li a.active:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
 
 .team {
   background: url("../images/bg/team.jpg") no-repeat;
@@ -1102,9 +1146,13 @@ h1, h2, h3, h4, h5, h6 {
     .menu-accordion__item_active .menu-accordion__description {
       width: 100%; } }
 
+.menu-accordion__item_active .menu-accordion__title {
+  color: #f9b43b; }
+
 .menu-accordion__link {
   width: 5rem;
-  text-decoration: none; }
+  text-decoration: none;
+  background-position: bottom; }
   .menu-accordion__link:after {
     position: absolute;
     height: 100%;
