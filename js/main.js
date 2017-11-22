@@ -13,51 +13,147 @@ hamburger.addEventListener("click", function() {
     }
 });
 
-//Onepage-scroll config
-$(".maincontent").onepage_scroll({
-      sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-      easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-                                       // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-      animationTime: 500,             // AnimationTime let you define how long each section takes to animate
-      pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-      updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-      beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-      afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-      loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-      keyboard: true,                  // You can activate the keyboard controls
-      responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-                                       // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-                                       // the browser's width is less than 600, the fallback will kick in.
-      direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-   });
+// OnePageScroll
+$(function() {
+    const display = $('.maincontent');
+    const sections = $('.section');
+    const mobileDetect = new MobileDetect(window.navigator.userAgent);  
+    isMobile = mobileDetect.mobile();
+    let inScroll = false;
+
+    const switchMenuActiveClass = sectionEq => {
+        $('.points__item').eq(sectionEq).addClass('points__item_active')
+                        .siblings().removeClass('points__item_active')
+    }
+
+    const performTransition = sectionEq => {
+        
+
+        if (inScroll == false) {
+            inScroll = true;
+            const position = (sectionEq * -100) + '%';
+
+            display.css ({
+                'transform' : `translateY(${position})`,
+                '-webkit-transform' : `translateY(${position})`,
+                '-ms-transform' : `translate(0, ${position})`,
+                ' -o-transform' : `translate(0, ${position})`,
+                ' -moz-transform' : `translate(0, ${position})`,
+            })
+    
+            sections.eq(sectionEq).addClass('active')
+                    .siblings().removeClass('active');
+            
+            setTimeout(() => {
+                inScroll = false;
+                switchMenuActiveClass(sectionEq);
+            }, 650);
+        }
+        
+    }
+
+    const defineSections = sections => {
+        const activeSection = sections.filter('.active');
+        return {
+            activeSection: activeSection,
+            nextSection: activeSection.next(),
+            prevSection: activeSection.prev()
+        }
+    }
+
+    const scrollToSection = direction => {
+        const section = defineSections(sections);
+
+        if (inScroll) return;
+
+        if (direction == 'up' && section.nextSection.length) { // Scroll down
+            performTransition(section.nextSection.index());
+        }
+        if (direction == 'down' && section.prevSection.length) { // Scroll up
+            performTransition(section.prevSection.index());
+        }
+    }
+
+    $('.wrapper').on({
+        'wheel': e => {
+            const deltaY = e.originalEvent.deltaY;
+            let direction = (deltaY > 0) ? 'up' : 'down';
+
+            scrollToSection(direction);
+        },
+
+        'touchmove': e => (e.preventDefault())
+    });
+
+    $(document).on('keydown', e => {
+        const section = defineSections(sections);
+
+        if (inScroll) return 
+        switch (e.keyCode) {
+            case 40: //Scroll up
+            case 32: //Scroll up for space
+                if (!section.nextSection.length) return;
+                performTransition(section.nextSection.index());
+            break;
+
+            case 38: //Scroll down
+                if (!section.prevSection.length) return;
+                performTransition(section.prevSection.index());
+            break;
+        }
+    });
+
+    if (isMobile) {
+        $(window).swipe({
+          swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            scrollToSection(direction);
+          }
+        })
+    }
+
+    $('[data-scroll-to]').on('click touchstart', e => {
+        e.preventDefault();
+        const $this = $(e.currentTarget);
+        const sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+        performTransition(sectionIndex);
+    });
+
+})
+
 
 //Carousel
+$(function() {
       var owl = $('.owl-carousel');
       $('.owl-carousel').owlCarousel({
             items: 1,
+            loop: true,
             nav: false,
             navText: ['','']
       });
-      
+
       // Go to the next item
       $('.slider__arrow_right').click(function() {
           owl.trigger('next.owl.carousel');
-      })
+      });
       // Go to the previous item
       $('.slider__arrow_left').click(function() {
           // With optional speed parameter
           // Parameters has to be in square bracket '[]'
           owl.trigger('prev.owl.carousel', [300]);
-      })
+      });
+})
 
 //fancybox
+$(function() {
       $("[data-fancybox]").fancybox({
             // Options will go here
       });
+})
 
 // Team Accordion
 $(function() {
-    $('.team-accordion__name').on('click', e =>{
+    $('.team-accordion__name').on('click touchstart', e =>{
         e.preventDefault()
 
         const $this = $(e.currentTarget);
@@ -71,22 +167,22 @@ $(function() {
 
             otherContent.css({
                 'height' : 0
-            })
+            });
             items.removeClass('team-accordion__item_active');
             item.addClass('team-accordion__item_active');
 
             content.css({
                 'height' : 100 + '%'
-            })
+            });
 
         } else {
             item.removeClass('team-accordion__item_active');
             content.css({
                 'height' : 0
-            })
+            });
         }
 
-    })
+    });
 })
 
 //Menu Accordion
@@ -99,7 +195,7 @@ $(function() {
             return i > 550 ? 550 : i
         }
 
-    $('.menu-accordion__link').on('click', e =>{
+    $('.menu-accordion__link').on('click touchstart', e =>{
         e.preventDefault()
 
         const $this = $(e.currentTarget);
