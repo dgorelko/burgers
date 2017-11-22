@@ -943,7 +943,7 @@ h1, h2, h3, h4, h5, h6 {
 .onepage-pagination li a.active:before {
   width: 16px;
   height: 16px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   border: 1px solid white;
   margin-top: -5px;
   left: 5px; }
@@ -1062,13 +1062,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 0.5rem;
     border: 0.5625rem solid transparent;
     border-top-color: #f9b43b;
-    border-bottom-width: 0rem; }
+    border-bottom-width: 0rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
 
 .team-accordion__content {
   padding-top: 0.9375rem;
   padding-left: 1.5rem;
+  overflow: hidden;
   height: 0;
-  overflow: hidden; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   @media (max-width: 48rem) {
     .team-accordion__content {
       padding-left: 0;
@@ -1125,7 +1130,6 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg); }
 .team-accordion__item_active .team-accordion__content {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1217,7 +1221,9 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   font-family: "ubuntulight";
   font-size: 0.875rem;
-  color: #fff; }
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
 
 .menu-accordion__text {
   padding: 3.75rem 1.875rem; }

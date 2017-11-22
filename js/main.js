@@ -55,6 +55,85 @@ $(".maincontent").onepage_scroll({
             // Options will go here
       });
 
+// Team Accordion
+$(function() {
+    $('.team-accordion__name').on('click', e =>{
+        e.preventDefault()
+
+        const $this = $(e.currentTarget);
+        const container = $this.closest('.team-accordion');
+        const item = $this.closest('.team-accordion__item');
+        const items = container.find('.team-accordion__item');
+        const content = item.find('.team-accordion__content');
+        const otherContent = container.find('.team-accordion__content');
+
+        if (!item.hasClass('team-accordion__item_active')) {
+
+            otherContent.css({
+                'height' : 0
+            })
+            items.removeClass('team-accordion__item_active');
+            item.addClass('team-accordion__item_active');
+
+            content.css({
+                'height' : 100 + '%'
+            })
+
+        } else {
+            item.removeClass('team-accordion__item_active');
+            content.css({
+                'height' : 0
+            })
+        }
+
+    })
+})
+
+//Menu Accordion
+$(function() {
+    function reqWidth(){ 
+        var e = $(window).width(),
+            t = $(".menu-accordion__link"),
+            n = t.width(),
+            i = e - n * t.length;
+            return i > 550 ? 550 : i
+        }
+
+    $('.menu-accordion__link').on('click', e =>{
+        e.preventDefault()
+
+        const $this = $(e.currentTarget);
+        const container = $this.closest('.menu-accordion');
+        const menu = $this.closest('.menu-accordion__item');
+        const menus = container.find('.menu-accordion__item');
+        const content = menu.find('.menu-accordion__description');
+        const text = menu.find('.menu-accordion__text');
+        const otherContent = container.find('.menu-accordion__description');
+
+        if (!menu.hasClass('menu-accordion__item_active')) {
+
+            otherContent.css({
+                'width' : 0
+            })
+
+            menus.removeClass('menu-accordion__item_active');
+            menu.addClass('menu-accordion__item_active');
+
+            content.css({
+                'width' : reqWidth()
+            })
+
+        } else {
+            menu.removeClass('menu-accordion__item_active');
+
+                content.css({
+                    'width' : 0
+                    })     
+        }
+
+    })
+})
+
 //Yandex Map
     ymaps.ready(init);
     var myMap,
