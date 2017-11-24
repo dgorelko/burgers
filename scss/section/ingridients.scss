@@ -6,7 +6,8 @@
   top: 0;
 
   @include phone {
-    right: -50px;
+    top:0;
+    left: 0;
     z-index: 200;
   }
 }

@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 let hamburger = document.querySelector(".nav-hamburger");
 let menu = document.querySelector(".greeting__menu");
 
@@ -10,4 +11,277 @@ hamburger.addEventListener("click", function() {
           hamburger.classList.add("nav-hamburger_active");
           menu.classList.add("greeting__menu_active");
     }
+});
+
+// OnePageScroll
+$(function() {
+    const display = $('.maincontent');
+    const sections = $('.section');
+    const mobileDetect = new MobileDetect(window.navigator.userAgent);  
+    isMobile = mobileDetect.mobile();
+    let inScroll = false;
+
+    const switchMenuActiveClass = sectionEq => {
+        $('.points__item').eq(sectionEq).addClass('points__item_active')
+                        .siblings().removeClass('points__item_active')
+    }
+
+    const performTransition = sectionEq => {
+        
+
+        if (inScroll == false) {
+            inScroll = true;
+            const position = (sectionEq * -100) + '%';
+
+            display.css ({
+                'transform' : `translateY(${position})`,
+                '-webkit-transform' : `translateY(${position})`,
+                '-ms-transform' : `translate(0, ${position})`,
+                ' -o-transform' : `translate(0, ${position})`,
+                ' -moz-transform' : `translate(0, ${position})`,
+            })
+    
+            sections.eq(sectionEq).addClass('active')
+                    .siblings().removeClass('active');
+            
+            setTimeout(() => {
+                inScroll = false;
+                switchMenuActiveClass(sectionEq);
+            }, 650);
+        }
+        
+    }
+
+    const defineSections = sections => {
+        const activeSection = sections.filter('.active');
+        return {
+            activeSection: activeSection,
+            nextSection: activeSection.next(),
+            prevSection: activeSection.prev()
+        }
+    }
+
+    const scrollToSection = direction => {
+        const section = defineSections(sections);
+
+        if (inScroll) return;
+
+        if (direction == 'up' && section.nextSection.length) { // Scroll down
+            performTransition(section.nextSection.index());
+        }
+        if (direction == 'down' && section.prevSection.length) { // Scroll up
+            performTransition(section.prevSection.index());
+        }
+    }
+
+    $('.wrapper').on({
+        'wheel': e => {
+            const deltaY = e.originalEvent.deltaY;
+            let direction = (deltaY > 0) ? 'up' : 'down';
+
+            scrollToSection(direction);
+        },
+
+        'touchmove': e => (e.preventDefault())
+    });
+
+    $(document).on('keydown', e => {
+        const section = defineSections(sections);
+
+        if (inScroll) return 
+        switch (e.keyCode) {
+            case 40: //Scroll up
+            case 32: //Scroll up for space
+                if (!section.nextSection.length) return;
+                performTransition(section.nextSection.index());
+            break;
+
+            case 38: //Scroll down
+                if (!section.prevSection.length) return;
+                performTransition(section.prevSection.index());
+            break;
+        }
+    });
+
+    if (isMobile) {
+        $(window).swipe({
+          swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            scrollToSection(direction);
+          }
+        })
+    }
+
+    $('[data-scroll-to]').on('click touchstart', e => {
+        e.preventDefault();
+        const $this = $(e.currentTarget);
+        const sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+        performTransition(sectionIndex);
+    });
+
+})
+
+
+//Carousel
+$(function() {
+      var owl = $('.owl-carousel');
+      $('.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            nav: false,
+            navText: ['','']
+      });
+
+      // Go to the next item
+      $('.slider__arrow_right').click(function() {
+          owl.trigger('next.owl.carousel');
+      });
+      // Go to the previous item
+      $('.slider__arrow_left').click(function() {
+          // With optional speed parameter
+          // Parameters has to be in square bracket '[]'
+          owl.trigger('prev.owl.carousel', [300]);
+      });
+})
+
+//fancybox
+$(function() {
+      $("[data-fancybox]").fancybox({
+            // Options will go here
+      });
+})
+
+// Team Accordion
+$(function() {
+    $('.team-accordion__name').on('click touchstart', e =>{
+        e.preventDefault()
+
+        const $this = $(e.currentTarget);
+        const container = $this.closest('.team-accordion');
+        const item = $this.closest('.team-accordion__item');
+        const items = container.find('.team-accordion__item');
+        const content = item.find('.team-accordion__content');
+        const otherContent = container.find('.team-accordion__content');
+
+        if (!item.hasClass('team-accordion__item_active')) {
+
+            otherContent.css({
+                'height' : 0
+            });
+            items.removeClass('team-accordion__item_active');
+            item.addClass('team-accordion__item_active');
+
+            content.css({
+                'height' : 100 + '%'
+            });
+
+        } else {
+            item.removeClass('team-accordion__item_active');
+            content.css({
+                'height' : 0
+            });
+        }
+
+    });
+})
+
+//Menu Accordion
+$(function() {
+    function reqWidth(){ 
+        var e = $(window).width(),
+            t = $(".menu-accordion__link"),
+            n = t.width(),
+            i = e - n * t.length;
+            return i > 550 ? 550 : i
+        }
+
+    $('.menu-accordion__link').on('click touchstart', e =>{
+        e.preventDefault()
+
+        const $this = $(e.currentTarget);
+        const container = $this.closest('.menu-accordion');
+        const menu = $this.closest('.menu-accordion__item');
+        const menus = container.find('.menu-accordion__item');
+        const content = menu.find('.menu-accordion__description');
+        const text = menu.find('.menu-accordion__text');
+        const otherContent = container.find('.menu-accordion__description');
+
+        if (!menu.hasClass('menu-accordion__item_active')) {
+
+            otherContent.css({
+                'width' : 0
+            })
+
+            menus.removeClass('menu-accordion__item_active');
+            menu.addClass('menu-accordion__item_active');
+
+            content.css({
+                'width' : reqWidth()
+            })
+
+        } else {
+            menu.removeClass('menu-accordion__item_active');
+
+                content.css({
+                    'width' : 0
+                    })     
+        }
+
+    })
+})
+
+//Yandex Map
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;    
+    
+    function init(){     
+        myMap = new ymaps.Map("yandexmap", {
+            center: [59.94057299, 30.31072784],
+            zoom: 12,
+            controls: []
+            });
+        
+        myMap.behaviors.disable('scrollZoom');
+
+        myPlacemark1 = new ymaps.Placemark([59.97025753, 30.31517629], {
+                hintContent: 'Москва!',
+                balloonContent: 'Столица России'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './images/icons/map-marker.svg'
+        });
+        
+        myPlacemark2 = new ymaps.Placemark([59.94560494, 30.38918380], {
+            hintContent: 'Москва!',
+            balloonContent: 'Столица России'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: './images/icons/map-marker.svg'
+        });
+
+        myPlacemark3 = new ymaps.Placemark([59.91173819, 30.50006632], {
+            hintContent: 'Москва!',
+            balloonContent: 'Столица России'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: './images/icons/map-marker.svg'
+        });
+
+        myPlacemark4 = new ymaps.Placemark([59.88712818, 30.31918887], {
+            hintContent: 'Москва!',
+            balloonContent: 'Столица России'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: './images/icons/map-marker.svg'
+        });
+
+        myMap.geoObjects.add(myPlacemark1)
+                        .add(myPlacemark2)
+                        .add(myPlacemark3)
+                        .add(myPlacemark4);
+        
+    }
+
+
 });

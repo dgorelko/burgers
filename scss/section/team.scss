@@ -49,8 +49,10 @@
     display: block;
   }
 }
+
 .team-accordion__item {
   padding-bottom: rem(40px);
+  
   &:last-child {
     padding-bottom: 0;
   }
@@ -83,15 +85,16 @@
     border: rem(9px) solid transparent;
     border-top-color: $yellow;
     border-bottom-width: rem(0px);
-
+    transition: 0.5s;
   }
 }
 
 .team-accordion__content {
   padding-top: rem(15px);
   padding-left: rem(24px);
-  height: 0;
   overflow: hidden;
+  height: 0;
+  display: flex;
   @include tablet {
     padding-left: 0;
     flex-direction: column;
@@ -148,7 +151,6 @@
     }
   }
   .team-accordion__content {
-    height: 100%;
     display: flex;
   }
 }

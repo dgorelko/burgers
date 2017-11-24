@@ -125,9 +125,9 @@
 
 .greeting__arrow {
   position: absolute;
-  bottom: rem(42px);
+  bottom: 10%;
   left: 50%;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
 }
 
 .burger__img {

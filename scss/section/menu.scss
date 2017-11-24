@@ -29,10 +29,6 @@
   top: 0;
   bottom: 0;
   right: 0;
-  @include phone {
-    right: 0;
-    left: 0;
-  }
 }
 
 .menu-accordion__item, .menu-accordion__link {
@@ -54,9 +50,14 @@
   }
 }
 
+.menu-accordion__item_active .menu-accordion__title {
+  color: $yellow;
+}
+
 .menu-accordion__link {
   width: rem(80px);
   text-decoration: none;
+  background-position: bottom;
   &:after {
     position: absolute;
     height: 100%;
@@ -87,6 +88,7 @@
   font-family: "ubuntulight";
   font-size: rem(14px);
   color: $white;
+  transition: 0.3s;
 }
 
 .menu-accordion__text {

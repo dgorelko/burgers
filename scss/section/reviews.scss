@@ -23,6 +23,11 @@
   color: $white;
   font-family: "gagalinregular";
   margin: 0 0 rem(31px) 0;
+  &_popup {
+    font-size: rem(14px);
+    font-family: "gagalinregular";
+    color: $dark-grey;
+  }
 }
 
 .reviews__text {
@@ -30,6 +35,11 @@
   font-size: rem(14px);
   color: $white;
   margin: 0 0 rem(17px) 0;
+  &_popup {
+    font-family: "ubuntulight";
+    font-size: rem(14px);
+    color: $dark-grey;
+  }
   @include phone {
     display: none;
   }
@@ -64,4 +74,21 @@
     flex: 4 0 25%;
     height: 25%;
   }
+}
+
+.reviews__popup {
+  display: none;
+  width: rem(472px);
+  border-radius: rem(4px);
+  @include phone {
+    width: rem(460px);
+  }
+}
+
+.fancybox-close-small:hover:after {
+  color: #ec8468;
+}
+
+.fancybox-close-small:after {
+  color: #ec8468;
 }

@@ -2,13 +2,21 @@
   text-align: left;
   display: flex;
   flex-direction: row;
+  width: 100%;
   @include tablet {
     flex-direction: column;
-    width: rem(472px);
   }
-  @include tablet {
+  @include phone {
     flex-direction: column;
-    width: rem(460px);
+  }
+}
+
+.order__form {
+  @include tablet {
+    padding: 0 13%;
+  }
+  @include phone {
+    padding: 0;
   }
 }
 
@@ -78,7 +86,7 @@
 
 .form__input-textarea {
   height: rem(109px);
-  width: rem(460px);
+  width: 100%;
   resize: none;
 }
 
@@ -158,7 +166,7 @@
     opacity: 0;
     position: absolute;
     left: rem(4px);
-    top: rem(4px);
+    top: rem(3px);
     transition: all 0.2s linear;
 
     @include phone {

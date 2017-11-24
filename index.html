@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="./css/main.css">
   <title>Магазин Бургеров</title>
 </head>
@@ -15,15 +18,15 @@
     <div class="wrapper">
         <div class="maincontent">
           <!-- greeting section -->  
-          <section class="section greeting" id="greeting-section">
+          <section class="section greeting active" id="greeting-section">
             <div class="greeting__menu">
                   <ul class="greeting__menu-list">
-                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">почему мы</a></li>
-                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">меню</a></li>
-                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">советы</a></li>
-                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">кто мы</a></li>
-                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">свяжитесь с нами</a></li>
-                    <li class="greeting__menu__item"><a href="" class="greeting__menu__link">контакты</a></li>
+                    <li class="greeting__menu__item"><a class="greeting__menu__link" href="" data-scroll-to="1">почему мы</a></li>
+                    <li class="greeting__menu__item"><a class="greeting__menu__link" href="" data-scroll-to="2">меню</a></li>
+                    <li class="greeting__menu__item"><a class="greeting__menu__link" href="" data-scroll-to="3">советы</a></li>
+                    <li class="greeting__menu__item"><a class="greeting__menu__link" href="" data-scroll-to="4">кто мы</a></li>
+                    <li class="greeting__menu__item"><a class="greeting__menu__link" href="" data-scroll-to="5">свяжитесь с нами</a></li>
+                    <li class="greeting__menu__item"><a class="greeting__menu__link" href="" data-scroll-to="7">контакты</a></li>
                   </ul>
             </div>
             <div class="container greeting__container">
@@ -35,14 +38,14 @@
                 </div>
                 <nav class="header__menu">
                   <ul class="navmenu-list">
-                    <li class="navmenu__item"><a href="#" class="navmenu__link">о нас</a></li>
-                    <li class="navmenu__item"><a href="#" class="navmenu__link">бургеры</a></li>
-                    <li class="navmenu__item"><a href="#" class="navmenu__link">команда</a></li>
-                    <li class="navmenu__item"><a href="#" class="navmenu__link">меню</a></li>
-                    <li class="navmenu__item"><a href="#" class="navmenu__link">отзывы</a></li>
-                    <li class="navmenu__item"><a href="#" class="navmenu__link">контакты</a></li>
+                    <li class="navmenu__item"><a class="navmenu__link" href="" data-scroll-to="1">о нас</a></li>
+                    <li class="navmenu__item"><a class="navmenu__link" href="" data-scroll-to="2">бургеры</a></li>
+                    <li class="navmenu__item"><a class="navmenu__link" href="" data-scroll-to="3">команда</a></li>
+                    <li class="navmenu__item"><a class="navmenu__link" href="" data-scroll-to="4">меню</a></li>
+                    <li class="navmenu__item"><a class="navmenu__link" href="" data-scroll-to="5">отзывы</a></li>
+                    <li class="navmenu__item"><a class="navmenu__link" href="" data-scroll-to="7">контакты</a></li>
                   </ul>
-                  <div class="header__btn"><a href="#" class="order__link">Заказать</a></div>
+                  <div class="header__btn"><a class="order__link" href="" data-scroll-to="6">Заказать</a></div>
                   <div class="nav-hamburger">
                     <span class="nav-hamburger__line"></span>
                     <span class="nav-hamburger__line"></span>
@@ -59,7 +62,7 @@
                   <span class="greeting__text">натуральные бургеры</span>
                 </div>
               </div>
-              <a href="#about-section" class="greeting__arrow arrow">
+              <a class="greeting__arrow arrow" href="" data-scroll-to="1">
                   <img src="./images/icons/arrow-scroll.svg" alt="arrow" class="arrow__image">
               </a>
             </div>
@@ -110,10 +113,11 @@
 
           <!-- slider section -->
           <section class="section slider">
-              <a href="#" class="slider__arrow slider__arrow_left">
+              <a  class="slider__arrow slider__arrow_left">
                   <img src="./images/icons/arrow-scroll.svg" alt="arrow" class="arrow__image">
               </a>
             <div class="container slider__container">
+              <div class="owl-carousel">
               <div class="slider__item">
                 <div class="slider__column">
                   <div class="ingridients">
@@ -193,8 +197,88 @@
                   </div>
                 </div>
               </div>
+              <div class="slider__item">
+                  <div class="slider__column">
+                    <div class="ingridients">
+  
+                      <div class="ingridients__trigger">
+                        <div class="ingridients__icon">
+                          <img src="./images/icons/burger.svg" alt="Состав" class="ingridients__image">
+                          <span class="ingridients__text">Состав</span>
+                        </div>
+                      </div>
+                      <ul class="ingridients-list">
+                          <li class="ingridients__item">
+                              <div class="ingridients__picture">
+                                  <img src="./images/icons/beef.svg" alt="Говядина" class="ingridients__image">
+                              </div>
+                              <span class="ingridients__name">Говядина</span>
+                              <span class="ingridients__size">300 г</span>
+                          </li>
+                          <li class="ingridients__item">
+                              <div class="ingridients__picture">
+                                  <img src="./images/icons/buns.svg" alt="Булочки" class="ingridients__image">
+                              </div>
+                              <span class="ingridients__name">Булочки</span>
+                              <span class="ingridients__size">100 г</span>
+                          </li>
+                          <li class="ingridients__item">
+                              <div class="ingridients__picture">
+                                  <img src="./images/icons/salad.svg" alt="Зелень" class="ingridients__image">
+                              </div>
+                              <span class="ingridients__name">Зелень</span>
+                              <span class="ingridients__size">70 г</span>
+                          </li>
+                          <li class="ingridients__item">
+                              <div class="ingridients__picture">
+                                  <img src="./images/icons/sauce.svg" alt="Соус" class="ingridients__image">
+                              </div>
+                              <span class="ingridients__name">Соус</span>
+                              <span class="ingridients__size">150 г</span>
+                          </li>
+                          <li class="ingridients__item">
+                              <div class="ingridients__picture">
+                                  <img src="./images/icons/cucumber.svg" alt="Овощи" class="ingridients__image">
+                              </div>
+                              <span class="ingridients__name">Овощи</span>
+                              <span class="ingridients__size">200 г</span>
+                          </li>
+                          <li class="ingridients__item">
+                              <div class="ingridients__picture">
+                                  <img src="./images/icons/cheese.svg" alt="Сыр" class="ingridients__image">
+                              </div>
+                              <span class="ingridients__name">Сыр</span>
+                              <span class="ingridients__size">80 г</span>
+                          </li>
+                      </ul> 
+                    </div>
+                    <div class="burger">
+                      <img src="./images/content/blackburg.png" alt="" class="burger__img">
+                    </div>
+                    <div class="kilocalories">
+                        <div class="kilocalories__icon">
+                          <img src="./images/icons/kkal.svg" alt="Килокалории" class="kilocalories__image">
+                            <span class="kilocalories__size">1200</span>
+                            <span class="kilocalories__text">ккал</span>
+                        </div> 
+                      </div>
+                  </div>
+                  <div class="slider__column">
+                    <span class="slider__title">Dark BEEF Burger</span>
+                    <p class="slider__description">Ваш старый добрый знакомый, с 
+                      рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, 
+                      двумя помидорами, луком, салатом и соусом гриль теперь с добавлением 
+                      экзотического соуса чураско.</p>
+                    <div class="slider__information">
+                      <span class="slider__price">500</span>
+                      <span class="slider__currency">рублей</span>
+                      <a href="#" class="slider__btn">Заказать</a>  
+                    </div>
+                  </div>
+                </div>
             </div>
-            <a href="#" class="slider__arrow slider__arrow_right">
+            </div>
+            <a  class="slider__arrow slider__arrow_right">
                 <img src="./images/icons/arrow-scroll.svg" alt="arrow" class="arrow__image">
             </a>
           </section>
@@ -219,7 +303,7 @@
                           </div>
                       </div>
                   </li>
-                  <li class="team-accordion__item team-accordion__item_active">
+                  <li class="team-accordion__item">
                       <a href="#" class="team-accordion__name">Ричард Джеймс</a>
                       <div class="team-accordion__content">
                           <div class="team-accordion__pic">
@@ -270,7 +354,7 @@
           <section class="section menu">
             <span class="menu__title">Меню</span>
             <ul class="menu-accordion">
-              <li class="menu-accordion__item menu-accordion__item_active">
+              <li class="menu-accordion__item">
                 <a href="" class="menu-accordion__link" style="background-image: url('./images/bg/menu-bg1.jpg')">
                   <span class="menu-accordion__title">
                     Для мясоедов
@@ -319,56 +403,56 @@
                   <div class="reviews__description">
                     <p class="reviews__name">константин спилберг</p>
                     <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                    <a href="" class="reviews__link">подробнее</a>
+                    <a class="reviews__link" data-fancybox data-src="#reviews-popup">подробнее</a>
                   </div>    
               </li>
               <li class="reviews__item" style="background-image:url(./images/content/photo2.jpg)">
                   <div class="reviews__description">
                     <p class="reviews__name">константин спилберг</p>
                     <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                    <a href="" class="reviews__link">подробнее</a>
+                    <a href="" class="reviews__link" data-fancybox data-src="#reviews-popup">подробнее</a>
                   </div>
               </li>
               <li class="reviews__item" style="background-image:url(./images/content/photo3.jpg)">
                   <div class="reviews__description">
                     <p class="reviews__name">константин спилберг</p>
                     <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                    <a href="" class="reviews__link">подробнее</a>
+                    <a href="" class="reviews__link" data-fancybox data-src="#reviews-popup">подробнее</a>
                   </div>
               </li>
               <li class="reviews__item" style="background-image:url(./images/content/photo4.jpg)">
                   <div class="reviews__description">
                     <p class="reviews__name">константин спилберг</p>
                     <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                    <a href="" class="reviews__link">подробнее</a>
+                    <a class="reviews__link" data-fancybox data-src="#reviews-popup">подробнее</a>
                   </div>
               </li>
               <li class="reviews__item" style="background-image:url(./images/content/photo5.jpg)">
                   <div class="reviews__description">
                     <p class="reviews__name">константин спилберг</p>
                     <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                    <a href="" class="reviews__link">подробнее</a>
+                    <a class="reviews__link" data-fancybox data-src="#reviews-popup">подробнее</a>
                   </div>
               </li>
               <li class="reviews__item" style="background-image:url(./images/content/photo6.jpg)">
                   <div class="reviews__description">
                     <p class="reviews__name">константин спилберг</p>
                     <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                    <a href="" class="reviews__link">подробнее</a>
+                    <a class="reviews__link" data-fancybox data-src="#reviews-popup">подробнее</a>
                   </div>
               </li>
               <li class="reviews__item" style="background-image:url(./images/content/photo7.jpg)">
                   <div class="reviews__description">
                     <p class="reviews__name">константин спилберг</p>
                     <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                    <a href="" class="reviews__link">подробнее</a>
+                    <a class="reviews__link" data-fancybox data-src="#reviews-popup">подробнее</a>
                   </div>
               </li>
               <li class="reviews__item" style="background-image:url(./images/content/photo8.jpg)">
                   <div class="reviews__description">
                     <p class="reviews__name">константин спилберг</p>
                     <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-                    <a href="" class="reviews__link">подробнее</a>
+                    <a  class="reviews__link" data-fancybox data-src="#reviews-popup">подробнее</a>
                   </div>
               </li>
              </ul>
@@ -447,7 +531,7 @@
 
           <!--map and footer section -->
           <section class="section map">
-            <div class="map__yandex" id="map"></div>
+            <div class="map__yandex" id="yandexmap"></div>
             <footer class="footer">
               <div class="container footer__container">
                 <div class="footer__col">
@@ -480,44 +564,52 @@
                 </div>
               </div>
             </footer>
-          </section>
-          <!-- sidebar -->
-            <ul class="points">
-                <li class="points__item points__item_active">
-                    <a href="#greeting-section" class="points__link">                    
-                    </a>                
-                </li>
-                <li class="points__item">
-                    <a href="#about-section" class="points__link">                    
-                    </a>                
-                </li>
-                <li class="points__item">
-                    <a href="#reviews-section" class="points__link">                    
-                    </a>                
-                </li>
-                <li class="points__item">
-                    <a href="#" class="points__link">                    
-                    </a>                
-                </li>                                              
-                <li class="points__item">
-                    <a href="#" class="points__link">                    
-                    </a>                
-                </li>
-                <li class="points__item">
-                    <a href="#" class="points__link">                    
-                    </a>                
-                </li>
-                <li class="points__item">
-                    <a href="#" class="points__link">                    
-                    </a>                
-                </li>
-                <li class="points__item">
-                    <a href="#" class="points__link">                    
-                    </a>                
-                </li>
-            </ul>
+          </section>            
         </div>
     </div>
-  <script src="./js/main.js"></script>
+    
+    <!-- sidebar -->
+    <ul class="points">
+        <li class="points__item points__item_active">
+            <a class="points__link" href="" data-scroll-to="0"></a>                
+        </li>
+        <li class="points__item">
+            <a class="points__link" href="" data-scroll-to="1"></a>                
+        </li>
+        <li class="points__item">
+            <a class="points__link" href="" data-scroll-to="2"></a>                
+        </li>
+        <li class="points__item">
+            <a class="points__link" href="" data-scroll-to="3"></a>                
+        </li>                                              
+        <li class="points__item">
+            <a class="points__link" href="" data-scroll-to="4"></a>                
+        </li>
+        <li class="points__item">
+            <a class="points__link" href="" data-scroll-to="5"></a>                
+        </li>
+        <li class="points__item">
+            <a class="points__link" href="" data-scroll-to="6"></a>                
+        </li>
+        <li class="points__item">
+            <a class="points__link" href="" data-scroll-to="7"></a>                
+        </li>
+    </ul>
+    
+
+    <div class="reviews__popup" id="reviews-popup">
+      <p class="reviews__name_popup">константин спилберг</p>
+      <p class="reviews__text_popup">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+          Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+      </p>       
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.7/mobile-detect.min.js"></script>
+  <script src="./js/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="./js/jquery.fancybox.min.js" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="./js/main.js" type="text/javascript"></script>
 </body>
 </html>
