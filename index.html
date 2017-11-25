@@ -174,7 +174,7 @@
                     </ul> 
                   </div>
                   <div class="burger">
-                    <img src="./images/content/blackburg.png" alt="" class="burger__img">
+                    <img src="./images/content/burger1.png" alt="" class="burger__img">
                   </div>
                   <div class="kilocalories">
                       <div class="kilocalories__icon">
@@ -253,7 +253,7 @@
                       </ul> 
                     </div>
                     <div class="burger">
-                      <img src="./images/content/blackburg.png" alt="" class="burger__img">
+                      <img src="./images/content/burger2.png" alt="" class="burger__img">
                     </div>
                     <div class="kilocalories">
                         <div class="kilocalories__icon">
@@ -462,7 +462,7 @@
           <section class="section order">
             <div class="container form__container">
                 <span class="order__title">Закажите доставку</span>
-                <form action="/" class="form order__form" method="POST">
+                <form action="form.php" class="form order__form" method="POST">
                     <div class="form__column form__column-phone">
                         <div class="form__row">
                             <div class="form__column">
@@ -508,16 +508,16 @@
                         </div>
                         <div class="form__row">
                             <div class="form__row-radio">
-                              <input type="radio" name="delivery" id="delivery" value="yes" class="form__radio">
-                              <label for="delivery" class="form__label">Потребуется сдача</label>
+                              <input type="radio" name="payment" id="cash" value="Потребуется сдача" class="form__radio">
+                              <label for="cash" class="form__label">Потребуется сдача</label>
                             </div>
                             <div class="form__row-radio">
-                                <input type="radio" name="delivery" id="cart" value="yes" class="form__radio">
-                                <label for="cart" class="form__label">Оплата по карте</label>
+                                <input type="radio" name="payment" id="card" value="Оплата по картe" class="form__radio" checked>
+                                <label for="card" class="form__label">Оплата по карте</label>
                             </div>
                         </div>
                         <div class="form__row form__row-checkbox">
-                            <input type="checkbox" value="call_no" id="call_no" name="call" class="form__checkbox">
+                            <input type="checkbox" id="call_no" name="callback" class="form__checkbox" checked>
                             <label for="call_no" class="form__label">Не перезванивать</label>
                         </div>
                         <div class="form__row">
@@ -536,7 +536,9 @@
               <div class="container footer__container">
                 <div class="footer__col">
                   <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-                  <a class="footer__phone" href="tel:+78123771377">+7 (812) 377-13-77</a>
+                  <a class="footer__phone" href="tel:+78123771377">
+                        <img src="./images/icons/phone.svg" class="footer__phone-icon">
+                      +7 (812) 377-13-77</a>
                 </div>
                 <div class="footer__col">
                   <ul class="socials">

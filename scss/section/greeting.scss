@@ -1,5 +1,5 @@
 .greeting   {
-  background-image: url("../images/bg/greeting.jpg");
+  background: url("../images/bg/greeting.jpg") center center no-repeat;
   background-size: cover;
   padding-top: rem(12px);
   box-sizing: border-box;
@@ -94,6 +94,7 @@
 .greeting__content {
   height: 100%;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
 
@@ -108,6 +109,7 @@
 
 .greeting__description {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-content: center;
   margin-top: rem(80px);
