@@ -235,18 +235,17 @@ $(function() {
     let submitForm = function (e) {
         e.preventDefault();
     
-        let form = $(e.target),
-            request = ajaxForm(form);
+        let form = $(e.target);
+        let request = ajaxForm(form);
     
         request.done(function(msg) {
-            var mes = msg.mes,
-                status = msg.status;
+            let mes = msg.mes;
+            let status = msg.status;
 
             if (status === 'OK') {
                 alert(mes);
-               // $('.modal').addClass('active');
                 form[0].reset();
-            } else{
+            } else {
                 alert(mes);
                 form[0].reset();
             }
@@ -258,9 +257,9 @@ $(function() {
         });
     }
     
-    var ajaxForm = function (form) {
+    let ajaxForm = function (form) {
     
-        var url = form.attr('action'),
+        let url = form.attr('action'),
             data = form.serialize();
     
         return $.ajax({

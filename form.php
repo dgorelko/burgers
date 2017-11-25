@@ -1,6 +1,5 @@
 <?php
 
-
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $street = $_POST['street'];
@@ -11,7 +10,7 @@
     $comment = $_POST['comment'];
     $payment = $_POST['payment'];
     $callback = $_POST['callback'];
-   $callback = isset($callback) ? 'Не перезванивать' : 'Перезвонить';
+    $callback = isset($callback) ? 'Не перезванивать' : 'Перезвонить';
 
    $mail_message = '
     <html>
@@ -40,14 +39,25 @@
     "MIME-Version: 1.0\r\n" .
     "Content-type: text/html; charset=UTF-8\r\n";
 
-    $mail = mail("dmitry.gorelko@yandex.ru", "Заказ", $mail_message, $headers);
-
-    if ($mail) {
-        $data['status'] = "OK";
-        $data['mes'] = "Письмо успешно отправлено";
-    }else{
+    if ($name == "") {
         $data['status'] = "ERROR";
-        $data['mes'] = "На сервере произошла ошибка";
+        $data['mes'] = "Поле имя постое!";
+    }
+    if ($phone == "") {
+        $data['status'] = "ERROR";
+        $data['mes'] = "Поле телефон постое!";
+    }
+
+    if ($data['status'] != "ERROR") {
+        $mail = mail('dmitry.gorelko@yandex.ru', 'Заказ', $mail_message, $headers);
+
+        if ($mail) {
+            $data['status'] = "OK";
+            $data['mes'] = "Письмо успешно отправлено";
+        }else{
+            $data['status'] = "ERROR";
+            $data['mes'] = "На сервере произошла ошибка";
+        }
     }
 
     echo json_encode($data);
