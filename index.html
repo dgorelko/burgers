@@ -174,7 +174,7 @@
                     </ul> 
                   </div>
                   <div class="burger">
-                    <img src="./images/content/blackburg.png" alt="" class="burger__img">
+                    <img src="./images/content/burger1.png" alt="" class="burger__img">
                   </div>
                   <div class="kilocalories">
                       <div class="kilocalories__icon">
@@ -253,7 +253,7 @@
                       </ul> 
                     </div>
                     <div class="burger">
-                      <img src="./images/content/blackburg.png" alt="" class="burger__img">
+                      <img src="./images/content/burger2.png" alt="" class="burger__img">
                     </div>
                     <div class="kilocalories">
                         <div class="kilocalories__icon">
@@ -462,16 +462,16 @@
           <section class="section order">
             <div class="container form__container">
                 <span class="order__title">Закажите доставку</span>
-                <form action="/" class="form order__form" method="POST">
+                <form action="form.php" class="form order__form" id="order-form" method="POST">
                     <div class="form__column form__column-phone">
                         <div class="form__row">
                             <div class="form__column">
                                 <label for="name" class="form__label">Имя</label>
-                                <input type="text" class="form__input" id="name" name="name">
+                                <input type="text" class="form__input" id="name" name="name" required>
                             </div>
                             <div class="form__column">
                                 <label for="phone" class="form__label">Телефон</label>
-                                <input type="tel" class="form__input" id="phone" name="phone" placeholder="89212264923">
+                                <input type="tel" class="form__input" id="phone" name="phone" placeholder="89212264923" required>
                             </div>
                         </div>
                         <div class="form__row">
@@ -508,16 +508,16 @@
                         </div>
                         <div class="form__row">
                             <div class="form__row-radio">
-                              <input type="radio" name="delivery" id="delivery" value="yes" class="form__radio">
-                              <label for="delivery" class="form__label">Потребуется сдача</label>
+                              <input type="radio" name="payment" id="cash" value="Потребуется сдача" class="form__radio">
+                              <label for="cash" class="form__label">Потребуется сдача</label>
                             </div>
                             <div class="form__row-radio">
-                                <input type="radio" name="delivery" id="cart" value="yes" class="form__radio">
-                                <label for="cart" class="form__label">Оплата по карте</label>
+                                <input type="radio" name="payment" id="card" value="Оплата по картe" class="form__radio" checked>
+                                <label for="card" class="form__label">Оплата по карте</label>
                             </div>
                         </div>
                         <div class="form__row form__row-checkbox">
-                            <input type="checkbox" value="call_no" id="call_no" name="call" class="form__checkbox">
+                            <input type="checkbox" id="call_no" name="callback" class="form__checkbox" checked>
                             <label for="call_no" class="form__label">Не перезванивать</label>
                         </div>
                         <div class="form__row">
@@ -536,7 +536,9 @@
               <div class="container footer__container">
                 <div class="footer__col">
                   <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-                  <a class="footer__phone" href="tel:+78123771377">+7 (812) 377-13-77</a>
+                  <a class="footer__phone" href="tel:+78123771377">
+                        <img src="./images/icons/phone.svg" class="footer__phone-icon">
+                      +7 (812) 377-13-77</a>
                 </div>
                 <div class="footer__col">
                   <ul class="socials">
@@ -603,7 +605,7 @@
           Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
       </p>       
     </div>
-
+    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.7/mobile-detect.min.js"></script>

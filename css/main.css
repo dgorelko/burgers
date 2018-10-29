@@ -114,19 +114,8 @@ h1, h2, h3, h4, h5, h6 {
       height: 100%;
       min-height: 50rem; } }
 
-.onepage-wrapper .section {
-  height: 100vh;
-  min-height: 40.625rem;
-  background-color: rgba(0, 0, 0, 0.31); }
-  @media screen and (max-width: 48rem) {
-    .onepage-wrapper .section {
-      min-height: 64rem; } }
-  @media screen and (max-width: 30rem) {
-    .onepage-wrapper .section {
-      min-height: 50rem; } }
-
 .greeting {
-  background-image: url("../images/bg/greeting.jpg");
+  background: url("../images/bg/greeting.jpg") center center no-repeat;
   background-size: cover;
   padding-top: 0.75rem;
   -webkit-box-sizing: border-box;
@@ -230,6 +219,9 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -254,6 +246,9 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -414,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
           transform: rotate(-45deg) translateY(-14px); }
 
 .about {
-  background-image: url("../images/bg/about.jpg");
+  background: url("../images/bg/about.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
   display: -webkit-box;
@@ -1206,7 +1201,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 3.75rem 1.875rem; }
 
 .order {
-  background-image: url("../images/bg/form.jpg");
+  background: url("../images/bg/form.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
   display: -webkit-box;
@@ -1484,6 +1479,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "ubuntubold";
   text-decoration: none;
   font-size: 0.875rem; }
+
+.footer__phone-icon {
+  width: 0.8125rem;
+  height: 0.75rem;
+  margin-right: 0.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
 
 .socials {
   position: relative;

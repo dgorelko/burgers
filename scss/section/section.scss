@@ -11,15 +11,3 @@
     min-height: rem(800px);
   }
 }
-
-.onepage-wrapper .section {
-  height: $section_height;
-  min-height: $section_minheight;
-  background-color: rgba(0,0,0,0.31);
-  @include tablet {
-    min-height: rem(1024px);
-  }
-  @include phone {
-    min-height: rem(800px);
-  }
-}

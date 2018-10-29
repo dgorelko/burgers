@@ -121,7 +121,6 @@ $(function() {
 
 })
 
-
 //Carousel
 $(function() {
       var owl = $('.owl-carousel');
@@ -230,7 +229,54 @@ $(function() {
     })
 })
 
+//Form order
+
+$(function() {
+    let submitForm = function (e) {
+        e.preventDefault();
+    
+        let form = $(e.target);
+        let request = ajaxForm(form);
+    
+        request.done(function(msg) {
+            let mes = msg.mes;
+            let status = msg.status;
+
+            if (status === 'OK') {
+                alert(mes);
+                form[0].reset();
+            } else {
+                alert(mes);
+                form[0].reset();
+            }
+        });
+    
+        request.fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+            form[0].reset();
+        });
+    }
+    
+    let ajaxForm = function (form) {
+    
+        let url = form.attr('action'),
+            data = form.serialize();
+    
+        return $.ajax({
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'JSON'
+        });
+    
+    }
+    
+    $('#order-form').on('submit', submitForm);
+})
+
 //Yandex Map
+
+$(function() {
     ymaps.ready(init);
     var myMap,
         myPlacemark;    
@@ -238,39 +284,39 @@ $(function() {
     function init(){     
         myMap = new ymaps.Map("yandexmap", {
             center: [59.94057299, 30.31072784],
-            zoom: 12,
+            zoom: 11,
             controls: []
             });
         
         myMap.behaviors.disable('scrollZoom');
 
-        myPlacemark1 = new ymaps.Placemark([59.97025753, 30.31517629], {
-                hintContent: 'Москва!',
-                balloonContent: 'Столица России'
+        myPlacemark1 = new ymaps.Placemark([59.973999, 30.311091], {
+                hintContent: 'Mr.Burger на Чапыгина',
+                balloonContent: 'улица Чапыгина, 13А'
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: './images/icons/map-marker.svg'
         });
         
-        myPlacemark2 = new ymaps.Placemark([59.94560494, 30.38918380], {
-            hintContent: 'Москва!',
-            balloonContent: 'Столица России'
+        myPlacemark2 = new ymaps.Placemark([59.94708381, 30.38481688], {
+            hintContent: 'Mr.Burger на Тверской',
+            balloonContent: 'Тверская улица, 16'
         }, {
             iconLayout: 'default#image',
             iconImageHref: './images/icons/map-marker.svg'
         });
 
-        myPlacemark3 = new ymaps.Placemark([59.91173819, 30.50006632], {
-            hintContent: 'Москва!',
-            balloonContent: 'Столица России'
+        myPlacemark3 = new ymaps.Placemark([59.91503, 30.486096], {
+            hintContent: 'Mr.Burger на Товарищеском',
+            balloonContent: 'Товарищеский проспект, 20/27'
         }, {
             iconLayout: 'default#image',
             iconImageHref: './images/icons/map-marker.svg'
         });
 
-        myPlacemark4 = new ymaps.Placemark([59.88712818, 30.31918887], {
-            hintContent: 'Москва!',
-            balloonContent: 'Столица России'
+        myPlacemark4 = new ymaps.Placemark([59.891295, 30.316907], {
+            hintContent: 'Mr.Burger на Московском',
+            balloonContent: 'Московский проспект, 103к2'
         }, {
             iconLayout: 'default#image',
             iconImageHref: './images/icons/map-marker.svg'
@@ -282,6 +328,5 @@ $(function() {
                         .add(myPlacemark4);
         
     }
-
-
-});
+  });
+})
